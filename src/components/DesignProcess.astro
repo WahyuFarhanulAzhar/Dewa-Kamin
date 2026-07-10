@@ -1,58 +1,78 @@
 ---
-import Placeholder from './Placeholder.astro';
+import Photo from './Photo.astro';
+import type { ImageMetadata } from 'astro';
 
-const steps = [
+import img01 from '../assets/photos/process-01-exterior-dusk.jpg';
+import img02 from '../assets/photos/gallery-bedroom-sconce.jpg';
+import img03 from '../assets/photos/gallery-chandelier-staircase.jpg';
+import img04 from '../assets/photos/process-04-bathroom.jpg';
+import img05 from '../assets/photos/process-05-kitchen-dining.jpg';
+import img06 from '../assets/photos/process-06-fireplace.jpg';
+
+interface Step {
+  number: string;
+  title: string;
+  text: string;
+  image: { src: ImageMetadata; alt: string; ratio: string };
+}
+
+const steps: Step[] = [
   {
     number: '01',
     title: 'CONCEPT DESIGN',
     text: 'We establish the vision for the project through space planning, layout development, and design direction. Floor plans, key design decisions, and visual concepts are refined to create a clear foundation for the phases that follow',
-    image: { label: 'Home exterior at dusk', ratio: '4/3' },
+    image: { src: img01, alt: 'Home exterior at dusk with warm accent lighting', ratio: '4/3' },
   },
   {
     number: '02',
     title: 'DESIGN DEVELOPMENT',
     text: 'Building on the approved concept, we refine and finalize every aspect of the design. Materials, finishes, furnishings, fixtures, and custom details are carefully selected and coordinated to ensure a cohesive vision while preparing the project for seamless execution',
-    image: { label: 'Bedroom detail, sconce & cushions', ratio: '3/4' },
+    image: { src: img02, alt: 'Bedroom detail with wall sconce and layered cushions', ratio: '3/4' },
   },
   {
     number: '03',
     title: 'TECHNICAL DESIGN',
     text: 'Detailed technical construction drawings and documentation are developed to guide accurate and seamless project execution',
-    image: { label: 'Chandelier over staircase', ratio: '3/4' },
+    image: { src: img03, alt: 'Capiz shell chandelier above the staircase', ratio: '3/4' },
   },
   {
     number: '04',
     title: 'TENDER',
     text: "We assist in selecting the most appropriate contract structure and assembling a qualified team tailored to the project's needs. All contractors, consultants, and specialist trades are coordinated to ensure a cohesive and well-executed delivery",
-    image: { label: 'Bathroom, glass shower & vanity', ratio: '4/3' },
+    image: { src: img04, alt: 'Bathroom with glass shower and floating vanity', ratio: '4/3' },
   },
   {
     number: '05',
     title: 'CONSTRUCTION',
     text: 'We remain closely involved throughout construction to ensure the design is executed with precision and care. Through site coordination, contractor collaboration, and FF&E oversight, we protect the integrity of the design through to completion',
-    image: { label: 'Kitchen & dining area', ratio: '4/3' },
+    image: { src: img05, alt: 'Kitchen and round dining table with dark marble accents', ratio: '4/3' },
   },
   {
     number: '06',
     title: 'PROJECT COMPLETION',
     text: 'We oversee the project through its final stages, ensuring every detail is executed in alignment with the approved design intent. Through careful coordination, site inspections, and final installations, we ensure a cohesive and fully realized space',
-    image: { label: 'Fireplace with artwork', ratio: '3/4' },
+    image: { src: img06, alt: 'Finished living room fireplace with artwork above', ratio: '3/4' },
   },
 ];
 ---
 
 <section class="bg-mist-light">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl">
+    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl" data-fade>
       DESIGN PROCESS
     </h2>
 
     <ol class="mt-12 grid grid-cols-1 gap-x-14 gap-y-14 md:grid-cols-2">
       {
         steps.map((step, index) => (
-          <li class:list={['flex flex-col gap-6', index % 2 === 1 && 'md:mt-16']}>
+          <li class:list={['flex flex-col gap-6', index % 2 === 1 && 'md:mt-16']} data-fade>
             <div class:list={['w-full', step.image.ratio === '3/4' && 'md:max-w-sm']}>
-              <Placeholder label={step.image.label} ratio={step.image.ratio} />
+              <Photo
+                src={step.image.src}
+                alt={step.image.alt}
+                ratio={step.image.ratio}
+                sizes="(min-width: 768px) 40vw, 100vw"
+              />
             </div>
             <div>
               <h3 class="font-display text-xl tracking-wide uppercase sm:text-2xl">

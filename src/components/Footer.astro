@@ -12,11 +12,11 @@ const links = [
     <p class="text-center">
       <a
         href="#top"
-        class="font-body inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+        class="group font-body inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
       >
         BACK TO TOP
         <svg
-          class="h-3.5 w-3.5"
+          class="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-1 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -44,7 +44,7 @@ const links = [
               <li>
                 <a
                   href={link.href}
-                  class="font-logo text-lg tracking-[0.12em] transition-opacity hover:opacity-70 sm:text-xl"
+                  class="font-logo link-underline text-lg tracking-[0.12em] sm:text-xl"
                 >
                   {link.label}
                 </a>

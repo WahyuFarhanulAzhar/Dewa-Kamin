@@ -1,13 +1,17 @@
 ---
-import Placeholder from './Placeholder.astro';
+import Photo from './Photo.astro';
+import staircase from '../assets/photos/hero-staircase-foyer.jpg';
+import cabinet from '../assets/photos/hero-display-cabinet.jpg';
+import fireplace from '../assets/photos/hero-fireplace.jpg';
+import exterior from '../assets/photos/hero-exterior-dusk.jpg';
 ---
 
 <section id="top" class="from-mist-light to-mist-dark bg-gradient-to-b" aria-label="Introduction">
   <div class="mx-auto max-w-7xl px-4 pt-8 pb-12 sm:px-6 lg:px-0 lg:pt-0 lg:pb-0">
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-0">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-0" data-fade-group>
       <!-- Headline -->
       <h1
-        class="font-display text-accent order-1 text-center text-3xl leading-tight font-medium text-balance sm:text-4xl lg:order-none lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:self-start lg:px-6 lg:pt-10 lg:text-left lg:text-[2.6rem] xl:text-5xl"
+        class="font-display text-accent order-1 text-center text-3xl leading-tight font-medium text-balance sm:text-4xl lg:order-none lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:z-10 lg:self-start lg:px-6 lg:pt-10 lg:text-left lg:text-[2.6rem] xl:text-5xl"
       >
         Residential, commercial, hospitality, and retail interiors defined by craft, context, and
         lasting design intent
@@ -15,16 +19,42 @@ import Placeholder from './Placeholder.astro';
 
       <!-- Collage -->
       <div class="order-2 lg:col-span-4 lg:col-start-4 lg:row-start-1 lg:-mt-2 lg:pl-8">
-        <Placeholder label="Staircase & foyer interior" ratio="4/3" class="lg:h-[34rem]" />
+        <Photo
+          src={staircase}
+          alt="Floating wood staircase with sculptural iron balusters beside the front entry"
+          ratio="4/3"
+          class="lg:h-[34rem]"
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          loading="eager"
+        />
       </div>
       <div class="order-3 lg:col-span-3 lg:col-start-6 lg:row-start-1 lg:z-10 lg:pt-0">
-        <Placeholder label="Dark wood display cabinet, dining" ratio="2/3" class="lg:h-[38rem]" />
+        <Photo
+          src={cabinet}
+          alt="Dark wood display cabinet with glass doors beside a dining table"
+          ratio="2/3"
+          class="lg:h-[38rem]"
+          sizes="(min-width: 1024px) 25vw, 100vw"
+          loading="eager"
+        />
       </div>
       <div class="order-4 lg:col-span-3 lg:col-start-10 lg:row-start-1 lg:mt-28">
-        <Placeholder label="Fireplace with art & sconces" ratio="3/4" />
+        <Photo
+          src={fireplace}
+          alt="Marble fireplace with abstract artwork, wall sconces and a pendant light"
+          ratio="3/4"
+          sizes="(min-width: 1024px) 25vw, 100vw"
+          loading="eager"
+        />
       </div>
-      <div class="order-5 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:mt-72 lg:mb-0">
-        <Placeholder label="Home exterior at dusk with driveway" ratio="5/4" />
+      <div class="order-5 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:mt-[26rem] lg:mb-0">
+        <Photo
+          src={exterior}
+          alt="Stone home exterior at dusk with a car parked in the driveway"
+          ratio="5/4"
+          sizes="(min-width: 1024px) 42vw, 100vw"
+          loading="eager"
+        />
       </div>
     </div>
   </div>

@@ -1,8 +1,8 @@
 # Assets needed from the client
 
-Checklist of every image/video slot on the site. Deliver the **highest-resolution originals** available (JPEG/PNG/TIFF — no pre-compression needed; the build pipeline optimizes automatically). Drop images into `src/assets/`, then each `<Placeholder />` is replaced with an `<Image />`.
+> **Status 2026-07-11: photography received and implemented.** The client delivered the full photo set (`assets/Image/drive-download-…`, gitignored); 60+ selected shots are placed via `src/assets/photos/` and rendered as AVIF through `astro:assets`. The gallery was also extended to match the full PDF design (bedrooms, bathrooms & wellness, living & outdoor groups). **Still open: the video embed link (see Video below) — the mp4 exists in the delivery but a YouTube/Vimeo link is preferred.**
 
-Guideline: landscape shots ≥ 2400px wide, portraits ≥ 1600px wide. Aspect ratios below describe the layout slot; close crops are fine.
+Original checklist kept below for slot reference. Aspect ratios describe the layout slot; close crops are fine.
 
 ## Hero (4 images)
 

@@ -1,5 +1,6 @@
 ---
-import Placeholder from './Placeholder.astro';
+import Photo from './Photo.astro';
+import designer from '../assets/photos/services-designer.jpg';
 
 const services = [
   {
@@ -25,10 +26,10 @@ const services = [
 
 <section id="services" class="from-mist-light to-mist-dark bg-gradient-to-br">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-    <h2 class="font-display text-5xl lowercase sm:text-6xl lg:text-7xl">services</h2>
+    <h2 class="font-display text-5xl lowercase sm:text-6xl lg:text-7xl" data-fade>services</h2>
 
     <div class="mt-12 grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
-      <div class="space-y-10 lg:col-span-6 lg:pl-6">
+      <div class="space-y-10 lg:col-span-6 lg:pl-6" data-fade-group>
         {
           services.map((service) => (
             <div>
@@ -45,8 +46,13 @@ const services = [
         }
       </div>
 
-      <div class="mx-auto w-full max-w-md lg:col-span-5 lg:col-start-8">
-        <Placeholder label="Designer reviewing material samples at desk" ratio="3/4" />
+      <div class="mx-auto w-full max-w-md lg:col-span-5 lg:col-start-8" data-fade>
+        <Photo
+          src={designer}
+          alt="Dewa Patang reviewing material samples and design books at her desk"
+          ratio="3/4"
+          sizes="(min-width: 1024px) 28rem, 100vw"
+        />
       </div>
     </div>
   </div>

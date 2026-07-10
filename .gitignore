@@ -26,4 +26,4 @@ pnpm-debug.log*
 # client source material (large, not part of the site)
 Copy_of_DEWAKAMINWEBSITE.pdf
 ScreenShot Design from PDF/
-assets/
+/assets/

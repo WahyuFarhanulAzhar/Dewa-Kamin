@@ -53,8 +53,8 @@ Astro (static, TypeScript strict) + Tailwind CSS v4 + self-hosted `@fontsource` 
 
 ## Open items (not decided yet)
 
-- [ ] High-res photography (full list in [assets-needed.md](assets-needed.md))
-- [ ] Final video hosting + link (YouTube/Vimeo preferred; source file `DEWA INTERIOR DESIGN VIDEO-FINAL_Rev8.mp4` currently on Dropbox)
+- [x] High-res photography — received 2026-07-11 and implemented (see [assets-needed.md](assets-needed.md))
+- [ ] Final video hosting + link (YouTube/Vimeo preferred; source file `DEWA INTERIOR DESIGN VIDEO-FINAL_Rev8.mp4` is in the photo delivery folder)
 - [ ] Exact brand fonts (current fonts are visual approximations — see [design.md](design.md))
 - [ ] Contact link behavior (e.g. should the announcement bar link to `#contact`? mail form vs. mailto?)
 - [ ] Domain & hosting (assumed `www.dewakamin.com`; Cloudflare Pages / Netlify / Vercel all fine — see [stack.md](stack.md))

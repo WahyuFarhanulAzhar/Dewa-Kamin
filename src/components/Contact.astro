@@ -1,18 +1,19 @@
 ---
-import Placeholder from './Placeholder.astro';
+import Photo from './Photo.astro';
+import designerSofa from '../assets/photos/contact-designer-sofa.jpg';
 ---
 
 <section id="contact" class="from-mist-light to-mist-dark bg-gradient-to-b">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl">CONTACT</h2>
-    <p class="font-logo text-accent mt-6 text-center text-3xl tracking-[0.08em] uppercase sm:text-4xl">
+    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl" data-fade>CONTACT</h2>
+    <p class="font-logo text-accent mt-6 text-center text-3xl tracking-[0.08em] uppercase sm:text-4xl" data-fade>
       Dewa Kamin Interior Design
     </p>
 
     <hr class="border-ink/20 mt-6 border-t" />
 
     <div class="mt-12 grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
-      <dl class="grid grid-cols-1 gap-x-10 gap-y-10 text-lg sm:grid-cols-2 lg:col-span-7">
+      <dl class="grid grid-cols-1 gap-x-10 gap-y-10 text-lg sm:grid-cols-2 lg:col-span-7" data-fade-group>
         <div class="flex gap-4">
           <svg class="mt-1 h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"></path>
@@ -98,8 +99,13 @@ import Placeholder from './Placeholder.astro';
         </div>
       </dl>
 
-      <div class="mx-auto w-full max-w-sm lg:col-span-4 lg:col-start-9">
-        <Placeholder label="Designer seated on sofa, city view" ratio="3/4" />
+      <div class="mx-auto w-full max-w-sm lg:col-span-4 lg:col-start-9" data-fade>
+        <Photo
+          src={designerSofa}
+          alt="Dewa Patang seated on a sofa with the city skyline behind"
+          ratio="3/4"
+          sizes="(min-width: 1024px) 24rem, 100vw"
+        />
       </div>
     </div>
   </div>

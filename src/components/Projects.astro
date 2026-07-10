@@ -1,15 +1,37 @@
 ---
-import Placeholder from './Placeholder.astro';
+import Photo from './Photo.astro';
+import type { ImageMetadata } from 'astro';
 
-const projects = [
+import torontoExterior from '../assets/photos/projects-toronto-exterior.jpg';
+import torontoKitchen from '../assets/photos/projects-toronto-kitchen.jpg';
+import torontoOffice from '../assets/photos/projects-toronto-office.jpg';
+import farmhouseChandelier from '../assets/photos/projects-farmhouse-chandelier.jpg';
+import farmhouseKitchen from '../assets/photos/projects-farmhouse-kitchen.jpg';
+import farmhouseHallway from '../assets/photos/projects-farmhouse-hallway.jpg';
+import renoStaircase from '../assets/photos/projects-reno-staircase.jpg';
+import renoKitchenette from '../assets/photos/projects-reno-kitchenette.jpg';
+import renoWardrobe from '../assets/photos/projects-reno-wardrobe.jpg';
+import renoShelving from '../assets/photos/projects-reno-shelving.jpg';
+import corpKitchen from '../assets/photos/projects-corporate-kitchen.jpg';
+import corpTable from '../assets/photos/projects-corporate-table.jpg';
+import corpArt from '../assets/photos/projects-corporate-art.jpg';
+
+interface Project {
+  label: string;
+  align: 'start' | 'end';
+  columnsClass: string;
+  images: { src: ImageMetadata; alt: string }[];
+}
+
+const projects: Project[] = [
   {
     label: 'TORONTO RESIDENCE',
     align: 'start',
     columnsClass: 'sm:grid-cols-3',
     images: [
-      { label: 'Exterior with driveway', ratio: '4/3' },
-      { label: 'Kitchen cabinet & dining', ratio: '4/3' },
-      { label: 'Home office with rug', ratio: '4/3' },
+      { src: torontoExterior, alt: 'Toronto residence exterior with driveway' },
+      { src: torontoKitchen, alt: 'Kitchen island with wine fridge and dining area' },
+      { src: torontoOffice, alt: 'Home office with staircase and persian rug' },
     ],
   },
   {
@@ -17,9 +39,9 @@ const projects = [
     align: 'end',
     columnsClass: 'sm:grid-cols-3',
     images: [
-      { label: 'Chandelier & cabinetry', ratio: '4/3' },
-      { label: 'Two-tone kitchen', ratio: '4/3' },
-      { label: 'Hallway', ratio: '3/4' },
+      { src: farmhouseChandelier, alt: 'Sculptural chandelier over coffered ceiling' },
+      { src: farmhouseKitchen, alt: 'Two-tone farmhouse kitchen with black island' },
+      { src: farmhouseHallway, alt: 'Bright hallway with wood floors' },
     ],
   },
   {
@@ -27,10 +49,10 @@ const projects = [
     align: 'start',
     columnsClass: 'sm:grid-cols-4',
     images: [
-      { label: 'Staircase', ratio: '3/4' },
-      { label: 'Kitchenette', ratio: '4/3' },
-      { label: 'Wardrobe doors', ratio: '3/4' },
-      { label: 'Shelving unit', ratio: '3/4' },
+      { src: renoStaircase, alt: 'Renovated staircase with dark accents' },
+      { src: renoKitchenette, alt: 'Compact white kitchenette' },
+      { src: renoWardrobe, alt: 'Light wood wardrobe doors' },
+      { src: renoShelving, alt: 'Renovated hallway with wood door' },
     ],
   },
   {
@@ -38,9 +60,9 @@ const projects = [
     align: 'end',
     columnsClass: 'sm:grid-cols-3',
     images: [
-      { label: 'Compact kitchen', ratio: '3/4' },
-      { label: 'Glass table & plant', ratio: '4/3' },
-      { label: 'Artwork detail', ratio: '3/4' },
+      { src: corpKitchen, alt: 'Compact corporate kitchen in light wood' },
+      { src: corpTable, alt: 'Glass table with plant and open shelving' },
+      { src: corpArt, alt: 'Workspace with shelving and abstract artwork' },
     ],
   },
 ];
@@ -48,19 +70,20 @@ const projects = [
 
 <section class="bg-charcoal text-white" aria-label="Projects">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl">PROJECTS</h2>
+    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl" data-fade>PROJECTS</h2>
 
     <div class="mt-14 space-y-16 lg:space-y-20">
       {
         projects.map((project) => (
-          <div class:list={['lg:max-w-4xl', project.align === 'end' && 'lg:ml-auto']}>
+          <div class:list={['lg:max-w-4xl', project.align === 'end' && 'lg:ml-auto']} data-fade>
             <div class:list={['grid grid-cols-1 gap-4 sm:gap-1', project.columnsClass]}>
               {project.images.map((image) => (
-                <Placeholder
-                  label={image.label}
-                  ratio={image.ratio}
-                  variant="dark"
+                <Photo
+                  src={image.src}
+                  alt={image.alt}
+                  ratio="4/3"
                   class="h-full"
+                  sizes="(min-width: 640px) 25vw, 100vw"
                 />
               ))}
             </div>

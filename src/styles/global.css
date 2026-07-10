@@ -41,3 +41,27 @@ section[id],
 [id="top"] {
   scroll-margin-top: 6rem;
 }
+
+/* Microinteraction: nav & footer links get an animated underline */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -0.2em;
+  border-bottom: 1px solid currentColor;
+  transition: right 0.35s ease;
+}
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  right: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-underline::after {
+    transition: none;
+  }
+}

@@ -1,5 +1,46 @@
 ---
-import Placeholder from './Placeholder.astro';
+import Photo from './Photo.astro';
+
+import exteriorDusk from '../assets/photos/gallery-exterior-dusk-sky.jpg';
+import exteriorGarden from '../assets/photos/gallery-exterior-garden-entry.jpg';
+import personEntrance from '../assets/photos/gallery-person-entrance-steps.jpg';
+import exteriorDriveway from '../assets/photos/gallery-exterior-driveway-car.jpg';
+import frontEntrance from '../assets/photos/gallery-front-entrance-dusk.jpg';
+import personBalcony from '../assets/photos/gallery-person-balcony.jpg';
+import personFrontDoor from '../assets/photos/gallery-person-front-door.jpg';
+import personTerrace from '../assets/photos/gallery-person-terrace-steps.jpg';
+import officeStaircase from '../assets/photos/gallery-office-staircase-rug.jpg';
+import officeDesk from '../assets/photos/gallery-office-desk-curtains.jpg';
+import foyerMarble from '../assets/photos/gallery-foyer-marble.jpg';
+import livingHerringbone from '../assets/photos/gallery-living-herringbone.jpg';
+import fireplaceDetail from '../assets/photos/gallery-fireplace-detail.jpg';
+import shelvingDetail from '../assets/photos/gallery-shelving-detail.jpg';
+import familyRoom from '../assets/photos/gallery-family-room-media.jpg';
+import staircase from '../assets/photos/gallery-staircase.jpg';
+import diningCabinet from '../assets/photos/gallery-dining-cabinet.jpg';
+import kitchenIsland from '../assets/photos/gallery-kitchen-island-pendants.jpg';
+import cabinetGlass from '../assets/photos/gallery-cabinet-glass-detail.jpg';
+import counterDetail from '../assets/photos/gallery-counter-backsplash-detail.jpg';
+import rangeHood from '../assets/photos/gallery-range-hood-detail.jpg';
+import islandSink from '../assets/photos/gallery-island-sink.jpg';
+import rangeMarble from '../assets/photos/gallery-range-marble.jpg';
+import kitchenWood from '../assets/photos/gallery-kitchen-wood-island.jpg';
+import chandelierStair from '../assets/photos/gallery-chandelier-staircase.jpg';
+import upperHallway from '../assets/photos/gallery-upper-hallway.jpg';
+import bedroom from '../assets/photos/gallery-bedroom.jpg';
+import bedroomSconce from '../assets/photos/gallery-bedroom-sconce.jpg';
+import vanitySuite from '../assets/photos/gallery-vanity-suite.jpg';
+import bathtub from '../assets/photos/gallery-bathtub.jpg';
+import showerBlue from '../assets/photos/gallery-shower-blue-tile.jpg';
+import bathVanity from '../assets/photos/gallery-bath-vanity.jpg';
+import walkinCloset from '../assets/photos/gallery-walkin-closet.jpg';
+import gymBar from '../assets/photos/gallery-gym-bar.jpg';
+import powderRoom from '../assets/photos/gallery-powder-room.jpg';
+import loungeSectional from '../assets/photos/gallery-lounge-sectional.jpg';
+import wardrobeLounge from '../assets/photos/gallery-wardrobe-lounge.jpg';
+import entranceGarden from '../assets/photos/gallery-entrance-garden-steps.jpg';
+import gardenDetail from '../assets/photos/gallery-garden-detail.jpg';
+import deckEvening from '../assets/photos/gallery-deck-evening.jpg';
 ---
 
 <section id="portfolio" class="bg-charcoal" aria-label="Portfolio gallery">
@@ -7,15 +48,15 @@ import Placeholder from './Placeholder.astro';
     <h2 class="sr-only">Portfolio</h2>
 
     <!-- Home exteriors: two overlapping shots + person at the entrance -->
-    <div class="grid grid-cols-1 gap-6 py-12 sm:py-16 lg:grid-cols-12 lg:gap-0">
+    <div class="grid grid-cols-1 gap-6 py-12 sm:py-16 lg:grid-cols-12 lg:gap-0" data-fade-group>
       <div class="lg:col-span-5 lg:col-start-1 lg:row-start-1">
-        <Placeholder label="Home exterior, dusk sky" ratio="4/3" variant="dark" />
+        <Photo src={exteriorDusk} alt="Stone home exterior against a dramatic dusk sky" ratio="4/3" sizes="(min-width: 1024px) 42vw, 100vw" />
       </div>
-      <div class="lg:col-span-5 lg:col-start-2 lg:row-start-1 lg:mt-64 lg:ml-10">
-        <Placeholder label="Home exterior, garden & front entry" ratio="16/10" variant="dark" />
+      <div class="lg:col-span-5 lg:col-start-2 lg:row-start-1 lg:z-10 lg:mt-64 lg:ml-10">
+        <Photo src={exteriorGarden} alt="Front entry seen through lush garden greenery at dusk" ratio="16/10" sizes="(min-width: 1024px) 42vw, 100vw" />
       </div>
       <div class="lg:col-span-5 lg:col-start-8 lg:row-start-1">
-        <Placeholder label="Person on entrance steps, iron railing" ratio="1/1" variant="dark" />
+        <Photo src={personEntrance} alt="Woman descending the front entrance steps along an iron railing" ratio="1/1" sizes="(min-width: 1024px) 42vw, 100vw" />
       </div>
     </div>
 
@@ -23,8 +64,8 @@ import Placeholder from './Placeholder.astro';
 
     <!-- Full-width exterior -->
     <div class="py-12 sm:py-16">
-      <div class="mx-auto lg:max-w-4xl">
-        <Placeholder label="Home exterior with driveway & car" ratio="16/10" variant="dark" />
+      <div class="mx-auto lg:max-w-4xl" data-fade>
+        <Photo src={exteriorDriveway} alt="Home exterior at dusk with a car in the driveway and stone steps" ratio="16/10" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
     </div>
 
@@ -32,18 +73,18 @@ import Placeholder from './Placeholder.astro';
 
     <!-- Grand entrance + person collage -->
     <div class="py-12 sm:py-16">
-      <div class="mx-auto lg:max-w-3xl">
-        <Placeholder label="Front entrance, stone steps at dusk" ratio="3/2" variant="dark" />
+      <div class="mx-auto lg:max-w-3xl" data-fade>
+        <Photo src={frontEntrance} alt="Grand front entrance with stone steps, planters and lantern light at dusk" ratio="3/2" sizes="(min-width: 1024px) 48rem, 100vw" />
       </div>
-      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0">
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-4 lg:col-start-1 lg:mt-10">
-          <Placeholder label="Person on balcony overlooking street" ratio="3/4" variant="dark" />
+          <Photo src={personBalcony} alt="Woman on a balcony railing overlooking the street" ratio="3/4" sizes="(min-width: 1024px) 33vw, 100vw" />
         </div>
         <div class="lg:col-span-4 lg:col-start-5 lg:z-10 lg:-mx-2">
-          <Placeholder label="Person at front door, planters" ratio="2/3" variant="dark" />
+          <Photo src={personFrontDoor} alt="Woman at the front door beside potted planters" ratio="2/3" sizes="(min-width: 1024px) 33vw, 100vw" />
         </div>
         <div class="lg:col-span-4 lg:col-start-9 lg:mt-16">
-          <Placeholder label="Person on garden terrace steps" ratio="3/4" variant="dark" />
+          <Photo src={personTerrace} alt="Woman on garden terrace steps with an iron railing" ratio="3/4" sizes="(min-width: 1024px) 33vw, 100vw" />
         </div>
       </div>
     </div>
@@ -52,29 +93,29 @@ import Placeholder from './Placeholder.astro';
 
     <!-- Interior living rooms & office -->
     <div class="py-12 sm:py-16">
-      <div class="mx-auto lg:max-w-4xl">
-        <Placeholder label="Home office with staircase & persian rug" ratio="3/2" variant="dark" />
+      <div class="mx-auto lg:max-w-4xl" data-fade>
+        <Photo src={officeStaircase} alt="Home office with a staircase, persian rug and dark wood desk" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
-      <div class="mx-auto mt-10 lg:max-w-4xl">
-        <Placeholder label="Desk by sheer curtains, home office" ratio="4/3" variant="dark" />
+      <div class="mx-auto mt-10 lg:max-w-4xl" data-fade>
+        <Photo src={officeDesk} alt="Desk and leather chair by sheer curtains in a home office" ratio="4/3" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
-      <div class="mx-auto mt-10 lg:max-w-4xl">
-        <Placeholder label="Foyer, marble floor & round mirror" ratio="3/2" variant="dark" />
+      <div class="mx-auto mt-10 lg:max-w-4xl" data-fade>
+        <Photo src={foyerMarble} alt="Foyer with polished marble floor, round mirror and console" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
-      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0">
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-8 lg:col-start-1 lg:row-start-1">
-          <Placeholder label="Living room, herringbone floor" ratio="4/3" variant="dark" />
+          <Photo src={livingHerringbone} alt="Living room with herringbone floor opening to the dining area" ratio="4/3" sizes="(min-width: 1024px) 66vw, 100vw" />
         </div>
         <div class="lg:col-span-4 lg:col-start-8 lg:row-start-1 lg:z-10 lg:mt-24">
-          <Placeholder label="Fireplace detail with pendant light" ratio="3/4" variant="dark" />
+          <Photo src={fireplaceDetail} alt="Fireplace with abstract artwork and pendant light" ratio="3/4" sizes="(min-width: 1024px) 33vw, 100vw" />
         </div>
       </div>
-      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0">
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:z-10">
-          <Placeholder label="Built-in shelving detail" ratio="4/3" variant="dark" />
+          <Photo src={shelvingDetail} alt="Built-in wood shelving styled with frames and objects" ratio="4/3" sizes="(min-width: 1024px) 42vw, 100vw" />
         </div>
         <div class="lg:col-span-8 lg:col-start-4 lg:row-start-1 lg:mt-16">
-          <Placeholder label="Family room with media wall" ratio="3/2" variant="dark" />
+          <Photo src={familyRoom} alt="Family room with built-in media wall and acrylic coffee table" ratio="3/2" sizes="(min-width: 1024px) 66vw, 100vw" />
         </div>
       </div>
     </div>
@@ -83,11 +124,11 @@ import Placeholder from './Placeholder.astro';
 
     <!-- Staircase & dining -->
     <div class="py-12 sm:py-16">
-      <div class="mx-auto lg:max-w-4xl">
-        <Placeholder label="Sculptural staircase, iron balusters" ratio="3/2" variant="dark" />
+      <div class="mx-auto lg:max-w-4xl" data-fade>
+        <Photo src={staircase} alt="Sculptural staircase with wavy iron balusters over black marble floor" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
-      <div class="mx-auto mt-10 lg:max-w-4xl">
-        <Placeholder label="Dining room & glass display cabinet" ratio="3/2" variant="dark" />
+      <div class="mx-auto mt-10 lg:max-w-4xl" data-fade>
+        <Photo src={diningCabinet} alt="Dining area with glass display cabinet and lotus pendant light" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
     </div>
 
@@ -95,26 +136,106 @@ import Placeholder from './Placeholder.astro';
 
     <!-- Kitchens -->
     <div class="py-12 sm:py-16">
-      <div class="mx-auto lg:max-w-4xl">
-        <Placeholder label="Kitchen with island & pendant lights" ratio="3/2" variant="dark" />
+      <div class="mx-auto lg:max-w-4xl" data-fade>
+        <Photo src={kitchenIsland} alt="Kitchen with wood island, pendant lights and dark marble backsplash" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
-      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <Placeholder label="Glass cabinet doors detail" ratio="1/1" variant="dark" />
-        <Placeholder label="Stone countertop & backsplash detail" ratio="1/1" variant="dark" />
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2" data-fade-group>
+        <Photo src={cabinetGlass} alt="Glass cabinet doors with crystal glassware detail" ratio="1/1" sizes="(min-width: 1024px) 50vw, 100vw" />
+        <Photo src={counterDetail} alt="Dark stone countertop and backsplash with styled objects" ratio="1/1" sizes="(min-width: 1024px) 50vw, 100vw" />
       </div>
-      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0">
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:z-10">
-          <Placeholder label="Stainless range hood detail" ratio="1/1" variant="dark" />
+          <Photo src={rangeHood} alt="Stainless steel range hood detail" ratio="1/1" sizes="(min-width: 1024px) 42vw, 100vw" />
         </div>
         <div class="lg:col-span-6 lg:col-start-5 lg:row-start-1 lg:mt-20">
-          <Placeholder label="Island sink & granite counter" ratio="4/3" variant="dark" />
+          <Photo src={islandSink} alt="Island sink with polished faucet on granite counter" ratio="4/3" sizes="(min-width: 1024px) 50vw, 100vw" />
         </div>
       </div>
-      <div class="mx-auto mt-10 lg:max-w-4xl">
-        <Placeholder label="Range & dark marble backsplash" ratio="3/2" variant="dark" />
+      <div class="mx-auto mt-10 lg:max-w-4xl" data-fade>
+        <Photo src={rangeMarble} alt="White kitchen with professional range and dark marble backsplash" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
       </div>
-      <div class="mx-auto mt-10 lg:max-w-4xl">
-        <Placeholder label="Kitchen island, wood cabinetry" ratio="16/10" variant="dark" />
+      <div class="mx-auto mt-10 lg:max-w-4xl" data-fade>
+        <Photo src={kitchenWood} alt="Kitchen island with dark wood cabinetry and black stone counter" ratio="16/10" sizes="(min-width: 1024px) 56rem, 100vw" />
+      </div>
+    </div>
+
+    <hr class="border-t border-white/20" />
+
+    <!-- Bedrooms & staircase details -->
+    <div class="py-12 sm:py-16">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:z-10">
+          <Photo src={chandelierStair} alt="Capiz shell chandelier above the staircase" ratio="3/4" sizes="(min-width: 1024px) 42vw, 100vw" />
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:mt-20">
+          <Photo src={upperHallway} alt="Upper hallway with iron railing and wood floors" ratio="3/2" sizes="(min-width: 1024px) 58vw, 100vw" />
+        </div>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+          <Photo src={bedroom} alt="Primary bedroom with upholstered bed and sheer curtains" ratio="3/2" sizes="(min-width: 1024px) 58vw, 100vw" />
+        </div>
+        <div class="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:z-10 lg:mt-24">
+          <Photo src={bedroomSconce} alt="Bedroom detail with wall sconce under a vaulted ceiling" ratio="3/4" sizes="(min-width: 1024px) 42vw, 100vw" />
+        </div>
+      </div>
+      <div class="mx-auto mt-10 lg:max-w-4xl" data-fade>
+        <Photo src={vanitySuite} alt="Dressing suite with long floating vanity and wide mirror" ratio="3/2" sizes="(min-width: 1024px) 56rem, 100vw" />
+      </div>
+    </div>
+
+    <hr class="border-t border-white/20" />
+
+    <!-- Bathrooms & wellness -->
+    <div class="py-12 sm:py-16">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+          <Photo src={bathtub} alt="Freestanding bathtub beside a glass shower" ratio="3/2" sizes="(min-width: 1024px) 58vw, 100vw" />
+        </div>
+        <div class="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:z-10 lg:mt-24">
+          <Photo src={showerBlue} alt="Blue-tiled shower with glass enclosure and vanity" ratio="3/4" sizes="(min-width: 1024px) 42vw, 100vw" />
+        </div>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:z-10">
+          <Photo src={bathVanity} alt="Bathroom vanity with tub and glass shower behind" ratio="4/3" sizes="(min-width: 1024px) 42vw, 100vw" />
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:mt-16">
+          <Photo src={walkinCloset} alt="Walk-in closet with built-in shelving and drawers" ratio="4/3" sizes="(min-width: 1024px) 58vw, 100vw" />
+        </div>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+          <Photo src={gymBar} alt="Lower-level bar with wine fridge beside a mirrored home gym" ratio="3/2" sizes="(min-width: 1024px) 58vw, 100vw" />
+        </div>
+        <div class="lg:col-span-4 lg:col-start-9 lg:row-start-1 lg:z-10 lg:mt-20">
+          <Photo src={powderRoom} alt="Powder room with dark stone counter and wood cabinetry" ratio="3/4" sizes="(min-width: 1024px) 33vw, 100vw" />
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-t border-white/20" />
+
+    <!-- Living rooms & outdoors -->
+    <div class="pt-12 pb-16 sm:pt-16 sm:pb-20">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+          <Photo src={loungeSectional} alt="Lounge with blue velvet sectional on a patterned rug" ratio="3/2" sizes="(min-width: 1024px) 58vw, 100vw" />
+        </div>
+        <div class="lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:z-10 lg:mt-32">
+          <Photo src={wardrobeLounge} alt="Sitting area with wood-panelled wardrobe wall" ratio="3/2" sizes="(min-width: 1024px) 50vw, 100vw" />
+        </div>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-4 lg:col-start-1 lg:mt-10">
+          <Photo src={entranceGarden} alt="Stone entrance steps through landscaped garden" ratio="3/4" sizes="(min-width: 1024px) 33vw, 100vw" />
+        </div>
+        <div class="lg:col-span-4 lg:col-start-5 lg:z-10 lg:-mx-2">
+          <Photo src={gardenDetail} alt="Iron railing with stone planters and red flowers" ratio="2/3" sizes="(min-width: 1024px) 33vw, 100vw" />
+        </div>
+        <div class="lg:col-span-4 lg:col-start-9 lg:mt-16">
+          <Photo src={deckEvening} alt="Balcony view over the driveway at blue hour" ratio="3/4" sizes="(min-width: 1024px) 33vw, 100vw" />
+        </div>
       </div>
     </div>
   </div>
