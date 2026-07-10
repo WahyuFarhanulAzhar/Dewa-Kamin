@@ -1,0 +1,62 @@
+---
+const links = [
+  { href: '#about', label: 'ABOUT' },
+  { href: '#services', label: 'SERVICES' },
+  { href: '#portfolio', label: 'PORTFOLIO' },
+  { href: '#contact', label: 'CONTACT' },
+];
+---
+
+<footer class="bg-charcoal text-white">
+  <div class="mx-auto max-w-7xl px-4 pt-6 pb-10 sm:px-6 lg:px-10">
+    <p class="text-center">
+      <a
+        href="#top"
+        class="font-body inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+      >
+        BACK TO TOP
+        <svg
+          class="h-3.5 w-3.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m5 15 7-7 7 7"></path>
+        </svg>
+      </a>
+    </p>
+
+    <div class="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
+      <a
+        href="#top"
+        class="font-logo text-center text-3xl leading-tight tracking-[0.06em] uppercase md:text-left lg:text-4xl"
+      >
+        <span class="block">DEWA KAMIN</span>
+        <span class="block">INTERIOR DESIGN</span>
+      </a>
+
+      <nav aria-label="Footer navigation">
+        <ul class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+          {
+            links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="font-logo text-lg tracking-[0.12em] transition-opacity hover:opacity-70 sm:text-xl"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="bg-accent px-4 py-3 text-center">
+    <p class="text-sm tracking-[0.15em] uppercase">© 2026 DEWA KAMIN INTERIOR DESIGN</p>
+  </div>
+</footer>

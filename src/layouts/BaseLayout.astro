@@ -1,0 +1,72 @@
+---
+import '@fontsource-variable/bodoni-moda';
+import '@fontsource-variable/playfair-display';
+import '@fontsource-variable/cormorant-garamond';
+import '@fontsource-variable/eb-garamond';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.dewakamin.com/#business',
+  name: 'Dewa Kamin Interior Design',
+  description:
+    'Residential, commercial, hospitality, and retail interiors defined by craft, context, and lasting design intent.',
+  url: 'https://www.dewakamin.com',
+  telephone: '+1-416-820-8669',
+  email: 'info@dewakamin.com',
+  founder: {
+    '@type': 'Person',
+    name: 'Dewa Patang',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '121 Forest Heights Blvd',
+    addressLocality: 'Toronto',
+    addressCountry: 'CA',
+    postalCode: 'M2L 2K7',
+  },
+  sameAs: [
+    'https://www.instagram.com/DewaKaminInteriorDesign',
+    'https://www.linkedin.com/company/DewaKaminInteriorDesign',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Dewa Kamin Interior Design" />
+    <meta property="og:locale" content="en_CA" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

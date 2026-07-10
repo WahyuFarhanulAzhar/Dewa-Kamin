@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — single source of truth (see docs/design.md).
+ * Never hardcode these values in components; use the Tailwind
+ * utilities they generate (bg-accent, font-display, ...).
+ */
+@theme {
+  /* Brand colors */
+  --color-accent: #9b2d1f; /* deep brick red — bars, hero headline, contact subheading */
+  --color-charcoal: #1e1e1b; /* navbar, dark gallery/projects backgrounds */
+  --color-mist-light: #e8e8e8; /* gray gradient start (Philosophy, Services, Process) */
+  --color-mist-dark: #cfcfcf; /* gray gradient end */
+  --color-ink: #1a1a18; /* near-black text on light sections */
+  --color-paper: #faf9f7; /* off-white page background */
+
+  /* Typography roles */
+  --font-display: "Bodoni Moda Variable", "Playfair Display Variable", "Bodoni MT", Didot, "Playfair Display", serif;
+  --font-logo: "Cormorant Garamond Variable", "Cormorant Garamond", Garamond, serif;
+  --font-body: "EB Garamond Variable", "EB Garamond", Garamond, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+/* Anchor targets clear the sticky navbar when scrolled to */
+section[id],
+[id="top"] {
+  scroll-margin-top: 6rem;
+}

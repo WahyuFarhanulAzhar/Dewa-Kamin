@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AnnouncementBar from '../components/AnnouncementBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Philosophy from '../components/Philosophy.astro';
+import Gallery from '../components/Gallery.astro';
+import VideoSection from '../components/VideoSection.astro';
+import Services from '../components/Services.astro';
+import DesignProcess from '../components/DesignProcess.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Dewa Kamin Interior Design | Toronto Interior Design Studio"
+  description="Residential, commercial, hospitality, and retail interiors defined by craft, context, and lasting design intent. Toronto-based interior design studio led by Dewa Patang."
+>
+  <AnnouncementBar />
+  <Navbar />
+  <main>
+    <Hero />
+    <Philosophy />
+    <Gallery />
+    <VideoSection />
+    <Services />
+    <DesignProcess />
+    <Projects />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

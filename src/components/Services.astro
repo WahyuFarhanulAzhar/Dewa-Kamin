@@ -1,0 +1,53 @@
+---
+import Placeholder from './Placeholder.astro';
+
+const services = [
+  {
+    title: 'RESIDENTIAL INTERIOR DESIGN',
+    items: ['Interior Master Planning', 'Renovations', 'Furniture Design, Styling & Installations'],
+  },
+  {
+    title: 'COMMERCIAL DESIGN',
+    items: [
+      'Commercial Interiors',
+      'Lighting Design',
+      'Retail Design',
+      'Corporate Spaces',
+      'Hospitality & Hotels',
+    ],
+  },
+  {
+    title: 'ARCHITECTURAL & BUILD',
+    items: ['Architectural Drawings', 'New Build Construction', 'Exterior Design & Landscaping'],
+  },
+];
+---
+
+<section id="services" class="from-mist-light to-mist-dark bg-gradient-to-br">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+    <h2 class="font-display text-5xl lowercase sm:text-6xl lg:text-7xl">services</h2>
+
+    <div class="mt-12 grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
+      <div class="space-y-10 lg:col-span-6 lg:pl-6">
+        {
+          services.map((service) => (
+            <div>
+              <h3 class="font-display text-2xl tracking-wide uppercase sm:text-3xl">
+                {service.title}
+              </h3>
+              <ul class="mt-2 space-y-0.5 text-lg sm:text-xl">
+                {service.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mx-auto w-full max-w-md lg:col-span-5 lg:col-start-8">
+        <Placeholder label="Designer reviewing material samples at desk" ratio="3/4" />
+      </div>
+    </div>
+  </div>
+</section>

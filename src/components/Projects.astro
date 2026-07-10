@@ -1,0 +1,75 @@
+---
+import Placeholder from './Placeholder.astro';
+
+const projects = [
+  {
+    label: 'TORONTO RESIDENCE',
+    align: 'start',
+    columnsClass: 'sm:grid-cols-3',
+    images: [
+      { label: 'Exterior with driveway', ratio: '4/3' },
+      { label: 'Kitchen cabinet & dining', ratio: '4/3' },
+      { label: 'Home office with rug', ratio: '4/3' },
+    ],
+  },
+  {
+    label: 'MODERN FARMHOUSE',
+    align: 'end',
+    columnsClass: 'sm:grid-cols-3',
+    images: [
+      { label: 'Chandelier & cabinetry', ratio: '4/3' },
+      { label: 'Two-tone kitchen', ratio: '4/3' },
+      { label: 'Hallway', ratio: '3/4' },
+    ],
+  },
+  {
+    label: 'RENOVATIONS',
+    align: 'start',
+    columnsClass: 'sm:grid-cols-4',
+    images: [
+      { label: 'Staircase', ratio: '3/4' },
+      { label: 'Kitchenette', ratio: '4/3' },
+      { label: 'Wardrobe doors', ratio: '3/4' },
+      { label: 'Shelving unit', ratio: '3/4' },
+    ],
+  },
+  {
+    label: 'DOWNTOWN CORPORATE',
+    align: 'end',
+    columnsClass: 'sm:grid-cols-3',
+    images: [
+      { label: 'Compact kitchen', ratio: '3/4' },
+      { label: 'Glass table & plant', ratio: '4/3' },
+      { label: 'Artwork detail', ratio: '3/4' },
+    ],
+  },
+];
+---
+
+<section class="bg-charcoal text-white" aria-label="Projects">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl">PROJECTS</h2>
+
+    <div class="mt-14 space-y-16 lg:space-y-20">
+      {
+        projects.map((project) => (
+          <div class:list={['lg:max-w-4xl', project.align === 'end' && 'lg:ml-auto']}>
+            <div class:list={['grid grid-cols-1 gap-4 sm:gap-1', project.columnsClass]}>
+              {project.images.map((image) => (
+                <Placeholder
+                  label={image.label}
+                  ratio={image.ratio}
+                  variant="dark"
+                  class="h-full"
+                />
+              ))}
+            </div>
+            <p class="font-logo mt-4 text-xl tracking-[0.1em] uppercase sm:text-2xl">
+              {project.label}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+---
+import Placeholder from './Placeholder.astro';
+---
+
+<section id="top" class="from-mist-light to-mist-dark bg-gradient-to-b" aria-label="Introduction">
+  <div class="mx-auto max-w-7xl px-4 pt-8 pb-12 sm:px-6 lg:px-0 lg:pt-0 lg:pb-0">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-0">
+      <!-- Headline -->
+      <h1
+        class="font-display text-accent order-1 text-center text-3xl leading-tight font-medium text-balance sm:text-4xl lg:order-none lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:self-start lg:px-6 lg:pt-10 lg:text-left lg:text-[2.6rem] xl:text-5xl"
+      >
+        Residential, commercial, hospitality, and retail interiors defined by craft, context, and
+        lasting design intent
+      </h1>
+
+      <!-- Collage -->
+      <div class="order-2 lg:col-span-4 lg:col-start-4 lg:row-start-1 lg:-mt-2 lg:pl-8">
+        <Placeholder label="Staircase & foyer interior" ratio="4/3" class="lg:h-[34rem]" />
+      </div>
+      <div class="order-3 lg:col-span-3 lg:col-start-6 lg:row-start-1 lg:z-10 lg:pt-0">
+        <Placeholder label="Dark wood display cabinet, dining" ratio="2/3" class="lg:h-[38rem]" />
+      </div>
+      <div class="order-4 lg:col-span-3 lg:col-start-10 lg:row-start-1 lg:mt-28">
+        <Placeholder label="Fireplace with art & sconces" ratio="3/4" />
+      </div>
+      <div class="order-5 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:mt-72 lg:mb-0">
+        <Placeholder label="Home exterior at dusk with driveway" ratio="5/4" />
+      </div>
+    </div>
+  </div>
+</section>
