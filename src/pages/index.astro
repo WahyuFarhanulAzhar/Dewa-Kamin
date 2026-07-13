@@ -21,8 +21,11 @@ import Footer from '../components/Footer.astro';
   <AnnouncementBar />
   <Navbar />
   <main>
-    <Hero />
-    <Philosophy />
+    <!-- Hero + Philosophy share one continuous white->fog gradient (as in the PDF) -->
+    <div class="to-fog bg-gradient-to-r from-white">
+      <Hero />
+      <Philosophy />
+    </div>
     <Gallery />
     <VideoSection />
     <Services />
