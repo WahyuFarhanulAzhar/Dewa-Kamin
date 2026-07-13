@@ -1,43 +1,38 @@
 # Design system — Dewa Kamin Interior Design
 
-Tokens are defined once in `src/styles/global.css` (Tailwind v4 `@theme` block) and used everywhere as Tailwind utilities (`bg-accent`, `font-display`, …). **Never hardcode color values or font names in components.** All values are close approximations of the client PDF, to be fine-tuned against the design later.
+Tokens are defined once in `src/styles/global.css` (Tailwind v4 `@theme` block) and used everywhere as Tailwind utilities (`bg-accent`, `font-display`, …). **Never hardcode color values or font names in components.** Colors are sampled directly from the client PDF (`Copy_of_DEWAKAMINWEBSITE.pdf`); fonts are the exact families embedded in it.
 
 ## Color tokens
 
 | Token | Value | Usage |
 | --- | --- | --- |
-| `accent` | `#9b2d1f` | Deep brick red — announcement bar, hero headline, video band, contact subheading, footer copyright bar |
-| `charcoal` | `#1e1e1b` | Navbar, footer, gallery & projects backgrounds |
-| `mist-light` | `#e8e8e8` | Gray gradient start — Philosophy, Services, Process, Hero, Contact backgrounds |
-| `mist-dark` | `#cfcfcf` | Gray gradient end |
-| `ink` | `#1a1a18` | Near-black body text on light sections |
+| `accent` | `#aa1212` | Announcement bar, hero headline, contact subheading, copyright bar |
+| `rust` | `#8c371f` | Video band background |
+| `charcoal` | `#252626` | Navbar, footer |
+| `espresso` | `#1f1c17` | Gallery + projects overview backgrounds |
+| `cocoa` | `#201712` | Project showcase backgrounds (Farmhouse / Downtown) |
+| `taupe` | `#4a4641` | Renovations showcase background |
+| `mist-light` | `#e7e6e6` | Design process flat background |
+| `fog` | `#9c9c9c` | Dark edge of the light gradients (philosophy/contact/hero) |
+| `umber` | `#4b3e3e` | Dark corner of the services gradient; contact icons |
+| `hairline` | `#d9cbae` | Thin warm rule lines (process, contact) |
+| `bone` | `#d8d5d0` | Muted white headings on dark sections |
+| `ink` | `#1a1a18` | Near-black text on light sections |
 | `paper` | `#faf9f7` | Off-white page background |
-| white / `white/xx` | — | Text on dark sections; divider lines on charcoal use `white/20` |
 
-Gradients: light sections use `bg-gradient-to-b` or `bg-gradient-to-br` from `mist-light` to `mist-dark`.
+Gradients: philosophy & contact use `bg-gradient-to-r from-white to-fog`; hero `to-b from-white to-fog/60`; services `to-br from-white via-fog to-umber`.
 
 ## Typography
 
-Self-hosted variable fonts via `@fontsource-variable/*`. These are **visual approximations** of the client's fonts and are easy to swap: change the `@fontsource` imports in `src/layouts/BaseLayout.astro` and the three `--font-*` tokens in `global.css`.
+Exact families extracted from the PDF. FoglihtenNo06 and CMU Serif are self-hosted woff2 in `src/assets/fonts/` (both SIL OFL, license files included); Arapey / EB Garamond / Montserrat come from Fontsource. Gilroy Light and Gotham Book in the PDF are commercial — Montserrat substitutes for both.
 
-| Role | Token | Font | Usage |
+| Role | Token | Font | Usage (PDF size -> site size at lg) |
 | --- | --- | --- | --- |
-| Display | `font-display` | Bodoni Moda (fallback: Playfair Display) | Section headings (`PHILOSOPHY`, `services`, `DESIGN PROCESS`, …), hero headline, service/step subheadings, contact labels |
-| Logo & nav | `font-logo` | Cormorant Garamond | Logo wordmark, nav links, project labels, red contact subheading |
-| Body | `font-body` | EB Garamond | Paragraphs, lists, announcement bar, small utility text |
-
-### Responsive type scale (Tailwind steps)
-
-| Element | Mobile | Tablet (sm) | Desktop (lg) |
-| --- | --- | --- | --- |
-| Hero headline | `text-3xl` | `text-4xl` | `~text-5xl` |
-| Section headings (h2) | `text-4xl` | `text-5xl` | `text-6xl` (`services`: up to `text-7xl`) |
-| Sub-headings (h3) | `text-xl`–`text-2xl` | `text-2xl`–`text-3xl` | — |
-| Logo | `text-2xl` | `text-3xl` | `text-4xl` |
-| Nav links | `text-lg` | — | `text-xl` |
-| Body | `text-lg` | `text-xl` | — |
-
-Headings use `tracking-wide`/letterspaced uppercase (exception: `services` is lowercase per the design). Nav/logo use wider tracking (`0.06em`–`0.12em`).
+| Display | `font-display` | **FoglihtenNo06** | Logo (40->44px nav, 32->40px footer), section headings (`PHILOSOPHY` 49->61, `services`/`DESIGN PROCESS` 80->100, `PROJECTS` 73->91, `CONTACT` 64->80), red contact subheading (31->39), step titles (21->27), contact labels (14->18), showcase titles (47-54 -> ~4vw) |
+| Hero | `font-hero` | **Arapey** | Hero headline only (35.6 -> 3.45vw) |
+| Body | `font-body` | **EB Garamond** | Paragraphs (16->20), top-nav links (19.7->24), announcement bar (18->22), project labels (22->28) |
+| Services | `font-services` | **CMU Serif** | Services block titles (25-27 -> 31) and items (19 -> 24, tight 1.3 leading) |
+| Sans | `font-sans` | **Montserrat** (sub for Gilroy/Gotham) | Contact values (13->16 light), footer links (14.5->18), BACK TO TOP (10->13), copyright (12->15) |
 
 ## Spacing
 

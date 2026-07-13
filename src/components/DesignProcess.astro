@@ -1,6 +1,5 @@
 ---
 import Photo from './Photo.astro';
-import type { ImageMetadata } from 'astro';
 
 import img01 from '../assets/photos/process-01-exterior-dusk.jpg';
 import img02 from '../assets/photos/gallery-bedroom-sconce.jpg';
@@ -9,80 +8,105 @@ import img04 from '../assets/photos/process-04-bathroom.jpg';
 import img05 from '../assets/photos/process-05-kitchen-dining.jpg';
 import img06 from '../assets/photos/process-06-fireplace.jpg';
 
-interface Step {
-  number: string;
-  title: string;
-  text: string;
-  image: { src: ImageMetadata; alt: string; ratio: string };
-}
-
-const steps: Step[] = [
-  {
-    number: '01',
-    title: 'CONCEPT DESIGN',
+const steps = {
+  s1: {
+    title: '01. CONCEPT DESIGN',
     text: 'We establish the vision for the project through space planning, layout development, and design direction. Floor plans, key design decisions, and visual concepts are refined to create a clear foundation for the phases that follow',
-    image: { src: img01, alt: 'Home exterior at dusk with warm accent lighting', ratio: '4/3' },
   },
-  {
-    number: '02',
-    title: 'DESIGN DEVELOPMENT',
+  s2: {
+    title: '02. DESIGN DEVELOPMENT',
     text: 'Building on the approved concept, we refine and finalize every aspect of the design. Materials, finishes, furnishings, fixtures, and custom details are carefully selected and coordinated to ensure a cohesive vision while preparing the project for seamless execution',
-    image: { src: img02, alt: 'Bedroom detail with wall sconce and layered cushions', ratio: '3/4' },
   },
-  {
-    number: '03',
-    title: 'TECHNICAL DESIGN',
+  s3: {
+    title: '03. TECHNICAL DESIGN',
     text: 'Detailed technical construction drawings and documentation are developed to guide accurate and seamless project execution',
-    image: { src: img03, alt: 'Capiz shell chandelier above the staircase', ratio: '3/4' },
   },
-  {
-    number: '04',
-    title: 'TENDER',
+  s4: {
+    title: '04. TENDER',
     text: "We assist in selecting the most appropriate contract structure and assembling a qualified team tailored to the project's needs. All contractors, consultants, and specialist trades are coordinated to ensure a cohesive and well-executed delivery",
-    image: { src: img04, alt: 'Bathroom with glass shower and floating vanity', ratio: '4/3' },
   },
-  {
-    number: '05',
-    title: 'CONSTRUCTION',
+  s5: {
+    title: '05. CONSTRUCTION',
     text: 'We remain closely involved throughout construction to ensure the design is executed with precision and care. Through site coordination, contractor collaboration, and FF&E oversight, we protect the integrity of the design through to completion',
-    image: { src: img05, alt: 'Kitchen and round dining table with dark marble accents', ratio: '4/3' },
   },
-  {
-    number: '06',
-    title: 'PROJECT COMPLETION',
+  s6: {
+    title: '06. PROJECT COMPLETION',
     text: 'We oversee the project through its final stages, ensuring every detail is executed in alignment with the approved design intent. Through careful coordination, site inspections, and final installations, we ensure a cohesive and fully realized space',
-    image: { src: img06, alt: 'Finished living room fireplace with artwork above', ratio: '3/4' },
   },
-];
+};
 ---
 
-<section class="bg-mist-light">
-  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl" data-fade>
+<!-- PDF pages 54-55: flat light gray, collage rows with thin warm rule lines -->
+<section class="bg-mist-light" aria-label="Design process">
+  <div class="mx-auto max-w-[1280px] px-4 py-14 sm:px-6 lg:px-12">
+    <h2 class="font-display text-4xl uppercase sm:text-6xl lg:text-[100px] lg:leading-none" data-fade>
       DESIGN PROCESS
     </h2>
 
-    <ol class="mt-12 grid grid-cols-1 gap-x-14 gap-y-14 md:grid-cols-2">
-      {
-        steps.map((step, index) => (
-          <li class:list={['flex flex-col gap-6', index % 2 === 1 && 'md:mt-16']} data-fade>
-            <div class:list={['w-full', step.image.ratio === '3/4' && 'md:max-w-sm']}>
-              <Photo
-                src={step.image.src}
-                alt={step.image.alt}
-                ratio={step.image.ratio}
-                sizes="(min-width: 768px) 40vw, 100vw"
-              />
-            </div>
-            <div>
-              <h3 class="font-display text-xl tracking-wide uppercase sm:text-2xl">
-                {step.number}. {step.title}
-              </h3>
-              <p class="mt-3 max-w-prose text-lg leading-relaxed">{step.text}</p>
-            </div>
-          </li>
-        ))
-      }
-    </ol>
+    <div class="border-hairline mt-10 border-t pt-8 lg:mt-12">
+      <!-- Page 1 · row 1 -->
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-5">
+          <Photo src={img01} alt="Home exterior at dusk with warm accent lighting" ratio="10/7" sizes="(min-width: 1024px) 42vw, 100vw" />
+        </div>
+        <div class="lg:border-hairline lg:col-span-4 lg:border-l lg:px-8 lg:pt-10">
+          <h3 class="font-display text-ink/80 text-xl lg:text-[27px] lg:leading-tight">{steps.s1.title}</h3>
+          <p class="mt-3 text-lg leading-[1.5] lg:text-[20px]">{steps.s1.text}</p>
+        </div>
+        <div class="lg:col-span-3 lg:px-6 lg:pt-8">
+          <h3 class="font-display text-ink/80 text-xl lg:text-[27px] lg:leading-tight">{steps.s2.title}</h3>
+          <p class="mt-3 text-lg leading-[1.5] lg:text-[20px]">{steps.s2.text}</p>
+        </div>
+      </div>
+
+      <!-- Page 1 · row 2 -->
+      <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-4 lg:pr-4">
+          <Photo src={img02} alt="Bedroom detail with wall sconce and layered cushions" ratio="3/4" sizes="(min-width: 1024px) 32vw, 100vw" />
+        </div>
+        <div class="lg:col-span-4 lg:px-2">
+          <Photo src={img03} alt="Capiz shell chandelier above the staircase" ratio="4/5" sizes="(min-width: 1024px) 33vw, 100vw" />
+        </div>
+        <div class="lg:border-hairline lg:col-span-4 lg:border-l lg:px-8 lg:pt-24">
+          <h3 class="font-display text-ink/80 text-xl lg:text-[27px] lg:leading-tight">{steps.s3.title}</h3>
+          <p class="mt-3 text-lg leading-[1.5] lg:text-[20px]">{steps.s3.text}</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="font-display mt-20 text-4xl uppercase sm:text-6xl lg:mt-28 lg:text-[100px] lg:leading-none" data-fade>
+      DESIGN PROCESS
+    </h2>
+
+    <div class="border-hairline mt-10 border-t pt-8 lg:mt-12">
+      <!-- Page 2 · row 1 -->
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-5 lg:-mt-2">
+          <Photo src={img05} alt="Kitchen and round dining table with dark marble accents" ratio="3/2" sizes="(min-width: 1024px) 42vw, 100vw" />
+        </div>
+        <div class="lg:border-hairline lg:col-span-4 lg:border-l lg:px-6 lg:pt-6">
+          <Photo src={img04} alt="Bathroom with glass shower and floating vanity" ratio="3/2" sizes="(min-width: 1024px) 33vw, 100vw" />
+        </div>
+        <div class="lg:col-span-3 lg:px-6 lg:pt-2">
+          <h3 class="font-display text-ink/80 text-xl lg:text-[27px] lg:leading-tight">{steps.s4.title}</h3>
+          <p class="mt-3 text-lg leading-[1.5] lg:text-[20px]">{steps.s4.text}</p>
+        </div>
+      </div>
+
+      <!-- Page 2 · row 2 -->
+      <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-0" data-fade-group>
+        <div class="lg:col-span-3 lg:pr-3">
+          <Photo src={img06} alt="Finished living room fireplace with artwork above" ratio="3/4" sizes="(min-width: 1024px) 24vw, 100vw" />
+        </div>
+        <div class="lg:border-hairline lg:col-span-5 lg:border-l lg:px-8 lg:pt-12">
+          <h3 class="font-display text-ink/80 text-xl lg:text-[27px] lg:leading-tight">{steps.s5.title}</h3>
+          <p class="mt-3 max-w-[52ch] text-lg leading-[1.5] lg:text-[20px]">{steps.s5.text}</p>
+        </div>
+        <div class="lg:col-span-4 lg:px-6 lg:pt-10">
+          <h3 class="font-display text-ink/80 text-xl lg:text-[27px] lg:leading-tight">{steps.s6.title}</h3>
+          <p class="mt-3 text-lg leading-[1.5] lg:text-[20px]">{steps.s6.text}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

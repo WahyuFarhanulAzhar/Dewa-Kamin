@@ -6,56 +6,63 @@ import fireplace from '../assets/photos/hero-fireplace.jpg';
 import exterior from '../assets/photos/hero-exterior-dusk.jpg';
 ---
 
-<section id="top" class="from-mist-light to-mist-dark bg-gradient-to-b" aria-label="Introduction">
-  <div class="mx-auto max-w-7xl px-4 pt-8 pb-12 sm:px-6 lg:px-0 lg:pt-0 lg:pb-0">
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-0" data-fade-group>
-      <!-- Headline -->
-      <h1
-        class="font-display text-accent order-1 text-center text-3xl leading-tight font-medium text-balance sm:text-4xl lg:order-none lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:z-10 lg:self-start lg:px-6 lg:pt-10 lg:text-left lg:text-[2.6rem] xl:text-5xl"
-      >
-        Residential, commercial, hospitality, and retail interiors defined by craft, context, and
-        lasting design intent
-      </h1>
+<!-- Full-bleed collage; positions replicate PDF page 3 (1024x550 canvas) -->
+<section id="top" class="to-fog/60 bg-gradient-to-b from-white" aria-label="Introduction">
+  <!-- Mobile / tablet: stacked -->
+  <div class="flex flex-col gap-4 px-4 pt-8 pb-10 sm:px-6 lg:hidden" data-fade-group>
+    <h1 class="font-hero text-accent text-center text-3xl leading-[1.3] text-balance sm:text-4xl">
+      Residential, commercial, hospitality, and retail interiors defined by craft, context, and
+      lasting design intent
+    </h1>
+    <Photo src={staircase} alt="Floating wood staircase with sculptural iron balusters beside the front entry" ratio="3/4" loading="eager" />
+    <Photo src={cabinet} alt="Dark wood display cabinet with glass doors beside a dining table" ratio="2/3" loading="eager" />
+    <Photo src={fireplace} alt="Marble fireplace with abstract artwork, wall sconces and a pendant light" ratio="3/4" />
+    <Photo src={exterior} alt="Stone home exterior at dusk with a car parked in the driveway" ratio="3/2" />
+  </div>
 
-      <!-- Collage -->
-      <div class="order-2 lg:col-span-4 lg:col-start-4 lg:row-start-1 lg:-mt-2 lg:pl-8">
-        <Photo
-          src={staircase}
-          alt="Floating wood staircase with sculptural iron balusters beside the front entry"
-          ratio="4/3"
-          class="lg:h-[34rem]"
-          sizes="(min-width: 1024px) 33vw, 100vw"
-          loading="eager"
-        />
-      </div>
-      <div class="order-3 lg:col-span-3 lg:col-start-6 lg:row-start-1 lg:z-10 lg:pt-0">
-        <Photo
-          src={cabinet}
-          alt="Dark wood display cabinet with glass doors beside a dining table"
-          ratio="2/3"
-          class="lg:h-[38rem]"
-          sizes="(min-width: 1024px) 25vw, 100vw"
-          loading="eager"
-        />
-      </div>
-      <div class="order-4 lg:col-span-3 lg:col-start-10 lg:row-start-1 lg:mt-28">
-        <Photo
-          src={fireplace}
-          alt="Marble fireplace with abstract artwork, wall sconces and a pendant light"
-          ratio="3/4"
-          sizes="(min-width: 1024px) 25vw, 100vw"
-          loading="eager"
-        />
-      </div>
-      <div class="order-5 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:mt-[26rem] lg:mb-0">
-        <Photo
-          src={exterior}
-          alt="Stone home exterior at dusk with a car parked in the driveway"
-          ratio="5/4"
-          sizes="(min-width: 1024px) 42vw, 100vw"
-          loading="eager"
-        />
-      </div>
+  <!-- Desktop: absolute collage on a 1024:550 canvas -->
+  <div class="relative hidden aspect-[1024/550] w-full lg:block" data-fade-group>
+    <div class="absolute top-0 left-[32.5%] h-[42.5%] w-[13.1%]">
+      <Photo
+        src={staircase}
+        alt="Floating wood staircase with sculptural iron balusters beside the front entry"
+        ratio="fill"
+        sizes="14vw"
+        loading="eager"
+      />
     </div>
+    <div class="absolute top-0 left-[46.4%] h-[80%] w-[28.8%]">
+      <Photo
+        src={cabinet}
+        alt="Dark wood display cabinet with glass doors beside a dining table"
+        ratio="fill"
+        sizes="29vw"
+        loading="eager"
+      />
+    </div>
+    <div class="absolute top-[30.3%] right-0 h-[65.6%] w-[25.8%]">
+      <Photo
+        src={fireplace}
+        alt="Marble fireplace with abstract artwork, wall sconces and a pendant light"
+        ratio="fill"
+        sizes="26vw"
+        loading="eager"
+      />
+    </div>
+    <div class="absolute bottom-0 left-0 h-[57%] w-[45.6%]">
+      <Photo
+        src={exterior}
+        alt="Stone home exterior at dusk with a car parked in the driveway"
+        ratio="fill"
+        sizes="46vw"
+        loading="eager"
+      />
+    </div>
+    <h1
+      class="font-hero text-accent absolute top-[3.5%] left-[5.5%] z-10 w-[39%] text-center text-[3.45vw] leading-[1.32]"
+    >
+      Residential, commercial, hospitality, and retail interiors defined by craft, context, and
+      lasting design intent
+    </h1>
   </div>
 </section>

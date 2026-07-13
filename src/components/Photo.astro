@@ -11,7 +11,7 @@ import type { ImageMetadata } from 'astro';
 interface Props {
   src: ImageMetadata;
   alt: string;
-  /** CSS aspect-ratio of the layout slot, e.g. "4/3", "2/3", "16/9" */
+  /** CSS aspect-ratio of the layout slot (e.g. "4/3"), or "fill" to size from the parent box */
   ratio?: string;
   class?: string;
   /** srcset sizes hint; defaults to full-width on mobile, half on desktop */
@@ -29,7 +29,10 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={['group w-full overflow-hidden', className]} style={`aspect-ratio: ${ratio};`}>
+<div
+  class:list={['group w-full overflow-hidden', ratio === 'fill' && 'h-full', className]}
+  style={ratio === 'fill' ? undefined : `aspect-ratio: ${ratio};`}
+>
   <Image
     src={src}
     alt={alt}

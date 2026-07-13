@@ -19,75 +19,81 @@ import corpArt from '../assets/photos/projects-corporate-art.jpg';
 interface Project {
   label: string;
   align: 'start' | 'end';
-  columnsClass: string;
-  images: { src: ImageMetadata; alt: string }[];
+  /** strip width at lg, fraction of the container */
+  stripClass: string;
+  images: { src: ImageMetadata; alt: string; widthClass: string }[];
 }
 
+/* Strip proportions measured from PDF page 56 */
 const projects: Project[] = [
   {
     label: 'TORONTO RESIDENCE',
     align: 'start',
-    columnsClass: 'sm:grid-cols-3',
+    stripClass: 'lg:w-[72%]',
     images: [
-      { src: torontoExterior, alt: 'Toronto residence exterior with driveway' },
-      { src: torontoKitchen, alt: 'Kitchen island with wine fridge and dining area' },
-      { src: torontoOffice, alt: 'Home office with staircase and persian rug' },
+      { src: torontoExterior, alt: 'Toronto residence exterior with driveway', widthClass: 'lg:w-[37%]' },
+      { src: torontoKitchen, alt: 'Kitchen island with wine fridge and dining area', widthClass: 'lg:w-[30%]' },
+      { src: torontoOffice, alt: 'Home office with staircase and persian rug', widthClass: 'lg:w-[33%]' },
     ],
   },
   {
     label: 'MODERN FARMHOUSE',
     align: 'end',
-    columnsClass: 'sm:grid-cols-3',
+    stripClass: 'lg:w-[55%]',
     images: [
-      { src: farmhouseChandelier, alt: 'Sculptural chandelier over coffered ceiling' },
-      { src: farmhouseKitchen, alt: 'Two-tone farmhouse kitchen with black island' },
-      { src: farmhouseHallway, alt: 'Bright hallway with wood floors' },
+      { src: farmhouseChandelier, alt: 'Sculptural chandelier over coffered ceiling', widthClass: 'lg:w-[21%]' },
+      { src: farmhouseKitchen, alt: 'Two-tone farmhouse kitchen with black island', widthClass: 'lg:w-[56%]' },
+      { src: farmhouseHallway, alt: 'Bright hallway with wood floors', widthClass: 'lg:w-[23%]' },
     ],
   },
   {
     label: 'RENOVATIONS',
     align: 'start',
-    columnsClass: 'sm:grid-cols-4',
+    stripClass: 'lg:w-[53%]',
     images: [
-      { src: renoStaircase, alt: 'Renovated staircase with dark accents' },
-      { src: renoKitchenette, alt: 'Compact white kitchenette' },
-      { src: renoWardrobe, alt: 'Light wood wardrobe doors' },
-      { src: renoShelving, alt: 'Renovated hallway with wood door' },
+      { src: renoStaircase, alt: 'Renovated staircase with dark accents', widthClass: 'lg:w-[29%]' },
+      { src: renoKitchenette, alt: 'Compact white kitchenette', widthClass: 'lg:w-[26%]' },
+      { src: renoWardrobe, alt: 'Light wood wardrobe doors', widthClass: 'lg:w-[28%]' },
+      { src: renoShelving, alt: 'Renovated hallway with wood door', widthClass: 'lg:w-[17%]' },
     ],
   },
   {
     label: 'DOWNTOWN CORPORATE',
     align: 'end',
-    columnsClass: 'sm:grid-cols-3',
+    stripClass: 'lg:w-[47%]',
     images: [
-      { src: corpKitchen, alt: 'Compact corporate kitchen in light wood' },
-      { src: corpTable, alt: 'Glass table with plant and open shelving' },
-      { src: corpArt, alt: 'Workspace with shelving and abstract artwork' },
+      { src: corpKitchen, alt: 'Compact corporate kitchen in light wood', widthClass: 'lg:w-[29%]' },
+      { src: corpTable, alt: 'Glass table with plant and open shelving', widthClass: 'lg:w-[26%]' },
+      { src: corpArt, alt: 'Workspace with shelving and abstract artwork', widthClass: 'lg:w-[45%]' },
     ],
   },
 ];
 ---
 
-<section class="bg-charcoal text-white" aria-label="Projects">
-  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-    <h2 class="font-display text-4xl tracking-wide uppercase sm:text-5xl lg:text-6xl" data-fade>PROJECTS</h2>
+<!-- PDF page 56: dark espresso, muted-white heading, tight photo strips -->
+<section class="bg-espresso text-bone" aria-label="Projects">
+  <div class="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 lg:px-12 lg:py-16">
+    <h2 class="font-display text-4xl uppercase sm:text-6xl lg:text-[91px] lg:leading-none" data-fade>
+      PROJECTS
+    </h2>
 
-    <div class="mt-14 space-y-16 lg:space-y-20">
+    <div class="mt-10 space-y-14 lg:mt-12 lg:space-y-16">
       {
         projects.map((project) => (
-          <div class:list={['lg:max-w-4xl', project.align === 'end' && 'lg:ml-auto']} data-fade>
-            <div class:list={['grid grid-cols-1 gap-4 sm:gap-1', project.columnsClass]}>
+          <div class:list={[project.stripClass, project.align === 'end' && 'lg:ml-auto']} data-fade>
+            <div class="flex flex-col gap-4 lg:h-60 lg:flex-row lg:gap-0">
               {project.images.map((image) => (
-                <Photo
-                  src={image.src}
-                  alt={image.alt}
-                  ratio="4/3"
-                  class="h-full"
-                  sizes="(min-width: 640px) 25vw, 100vw"
-                />
+                <div class:list={['aspect-[4/3] w-full lg:aspect-auto lg:h-full', image.widthClass]}>
+                  <Photo
+                    src={image.src}
+                    alt={image.alt}
+                    ratio="fill"
+                    sizes="(min-width: 1024px) 30vw, 100vw"
+                  />
+                </div>
               ))}
             </div>
-            <p class="font-logo mt-4 text-xl tracking-[0.1em] uppercase sm:text-2xl">
+            <p class="font-body mt-3 text-xl tracking-[0.04em] uppercase lg:text-[28px]">
               {project.label}
             </p>
           </div>

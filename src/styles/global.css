@@ -1,23 +1,54 @@
 @import "tailwindcss";
 
 /*
+ * Self-hosted display fonts (both SIL OFL — license files sit next to
+ * the woff2 in src/assets/fonts/). The remaining families come from
+ * Fontsource imports in BaseLayout.astro.
+ */
+@font-face {
+  font-family: "FoglihtenNo06";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/FoglihtenNo06.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CMU Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/cmu-serif-roman.woff2") format("woff2");
+}
+
+/*
  * Design tokens — single source of truth (see docs/design.md).
- * Never hardcode these values in components; use the Tailwind
- * utilities they generate (bg-accent, font-display, ...).
+ * Colors are sampled directly from the client PDF; fonts are the exact
+ * families embedded in it (Gilroy/Gotham → Montserrat substitute).
+ * Never hardcode these values in components.
  */
 @theme {
-  /* Brand colors */
-  --color-accent: #9b2d1f; /* deep brick red — bars, hero headline, contact subheading */
-  --color-charcoal: #1e1e1b; /* navbar, dark gallery/projects backgrounds */
-  --color-mist-light: #e8e8e8; /* gray gradient start (Philosophy, Services, Process) */
-  --color-mist-dark: #cfcfcf; /* gray gradient end */
+  /* Brand colors (sampled from Copy_of_DEWAKAMINWEBSITE.pdf) */
+  --color-accent: #aa1212; /* announcement bar, hero headline, contact subheading, copyright bar */
+  --color-rust: #8c371f; /* video band background */
+  --color-charcoal: #252626; /* navbar, footer */
+  --color-espresso: #1f1c17; /* gallery + projects overview background */
+  --color-cocoa: #201712; /* project showcase backgrounds (farmhouse/downtown) */
+  --color-taupe: #4a4641; /* renovations showcase background */
+  --color-mist-light: #e7e6e6; /* design process flat background */
+  --color-fog: #9c9c9c; /* right edge of the light gray gradients */
+  --color-umber: #4b3e3e; /* dark corner of the services gradient */
+  --color-hairline: #d9cbae; /* thin warm rule lines (process, contact) */
+  --color-bone: #d8d5d0; /* muted white headings on dark sections */
   --color-ink: #1a1a18; /* near-black text on light sections */
   --color-paper: #faf9f7; /* off-white page background */
 
-  /* Typography roles */
-  --font-display: "Bodoni Moda Variable", "Playfair Display Variable", "Bodoni MT", Didot, "Playfair Display", serif;
-  --font-logo: "Cormorant Garamond Variable", "Cormorant Garamond", Garamond, serif;
-  --font-body: "EB Garamond Variable", "EB Garamond", Garamond, serif;
+  /* Typography roles — exact families from the PDF */
+  --font-display: "FoglihtenNo06", "Bodoni MT", Didot, serif; /* logo, section headings, labels */
+  --font-hero: "Arapey", Georgia, serif; /* hero headline */
+  --font-body: "EB Garamond Variable", "EB Garamond", Garamond, serif; /* body, nav links, project labels */
+  --font-services: "CMU Serif", "Computer Modern", Georgia, serif; /* services blocks */
+  --font-sans: "Montserrat Variable", Montserrat, sans-serif; /* contact values, footer links (Gilroy/Gotham substitute) */
 }
 
 html {

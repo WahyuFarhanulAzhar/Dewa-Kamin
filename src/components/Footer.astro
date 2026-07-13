@@ -7,16 +7,17 @@ const links = [
 ];
 ---
 
+<!-- PDF pages 67-68: charcoal bar with sans links, red copyright strip -->
 <footer class="bg-charcoal text-white">
-  <div class="mx-auto max-w-7xl px-4 pt-6 pb-10 sm:px-6 lg:px-10">
+  <div class="mx-auto max-w-[1280px] px-4 pt-5 pb-8 sm:px-6 lg:px-12">
     <p class="text-center">
       <a
         href="#top"
-        class="group font-body inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+        class="group font-sans inline-flex items-center gap-2 text-[13px] tracking-[0.18em] uppercase transition-opacity hover:opacity-70"
       >
         BACK TO TOP
         <svg
-          class="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-1 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0"
+          class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-1 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -28,23 +29,20 @@ const links = [
       </a>
     </p>
 
-    <div class="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
-      <a
-        href="#top"
-        class="font-logo text-center text-3xl leading-tight tracking-[0.06em] uppercase md:text-left lg:text-4xl"
-      >
+    <div class="mt-4 flex flex-col items-center gap-8 md:flex-row md:justify-between lg:gap-12">
+      <a href="#top" class="font-display text-center text-3xl leading-[1.15] md:text-left lg:text-[40px]">
         <span class="block">DEWA KAMIN</span>
         <span class="block">INTERIOR DESIGN</span>
       </a>
 
-      <nav aria-label="Footer navigation">
-        <ul class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+      <nav aria-label="Footer navigation" class="md:mx-auto md:-mt-6">
+        <ul class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 lg:gap-20">
           {
             links.map((link) => (
               <li>
                 <a
                   href={link.href}
-                  class="font-logo link-underline text-lg tracking-[0.12em] sm:text-xl"
+                  class="font-sans link-underline text-sm tracking-[0.14em] lg:text-[18px]"
                 >
                   {link.label}
                 </a>
@@ -56,7 +54,9 @@ const links = [
     </div>
   </div>
 
-  <div class="bg-accent px-4 py-3 text-center">
-    <p class="text-sm tracking-[0.15em] uppercase">© 2026 DEWA KAMIN INTERIOR DESIGN</p>
+  <div class="bg-accent px-4 py-2.5 text-center">
+    <p class="font-sans text-xs tracking-[0.08em] uppercase lg:text-[15px]">
+      © 2026 DEWA KAMIN INTERIOR DESIGN
+    </p>
   </div>
 </footer>

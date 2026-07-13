@@ -1,0 +1,97 @@
+---
+import Photo from './Photo.astro';
+
+import farmhousePerson from '../assets/photos/showcase-farmhouse-person.jpg';
+import farmhouseKitchen from '../assets/photos/showcase-farmhouse-kitchen.jpg';
+import renoStaircase from '../assets/photos/projects-reno-staircase.jpg';
+import renoKitchenette from '../assets/photos/projects-reno-kitchenette.jpg';
+import renoWardrobe from '../assets/photos/projects-reno-wardrobe.jpg';
+import renoShelving from '../assets/photos/projects-reno-shelving.jpg';
+import corpDining from '../assets/photos/showcase-corporate-dining.jpg';
+import corpLiving from '../assets/photos/showcase-corporate-living.jpg';
+import corpKitchen from '../assets/photos/projects-corporate-kitchen.jpg';
+---
+
+<!-- Project showcase pages from the PDF (57, 62, 65): full-bleed dark collages with title overlays -->
+<div aria-label="Project showcases">
+  <!-- MODERN FARMHOUSE — PDF page 57 -->
+  <section class="bg-cocoa relative" aria-label="Modern Farmhouse project">
+    <div class="flex flex-col gap-4 px-4 py-10 sm:px-6 lg:hidden">
+      <h3 class="font-display text-bone text-3xl uppercase sm:text-4xl" data-fade>MODERN FARMHOUSE</h3>
+      <div data-fade-group>
+        <Photo src={farmhousePerson} alt="Designer drawing back the curtains in a dark dressing room" ratio="3/4" />
+        <div class="mt-4">
+          <Photo src={farmhouseKitchen} alt="Farmhouse kitchen with cream cabinetry and black island" ratio="3/2" />
+        </div>
+      </div>
+    </div>
+
+    <div class="relative hidden aspect-[1024/586] w-full lg:block" data-fade-group>
+      <div class="absolute top-[3.5%] left-0 h-[92.5%] w-[33.5%]">
+        <Photo src={farmhousePerson} alt="Designer drawing back the curtains in a dark dressing room" ratio="fill" sizes="34vw" />
+      </div>
+      <h3 class="font-display text-bone absolute top-[4%] right-[6%] z-10 text-[4.2vw] leading-none uppercase">
+        MODERN FARMHOUSE
+      </h3>
+      <div class="absolute top-[14%] left-[34.3%] h-[79%] w-[61.7%]">
+        <Photo src={farmhouseKitchen} alt="Farmhouse kitchen with cream cabinetry and black island" ratio="fill" sizes="62vw" />
+      </div>
+    </div>
+  </section>
+
+  <!-- RENOVATIONS — PDF page 62 -->
+  <section class="bg-taupe" aria-label="Renovations project">
+    <div class="px-4 py-10 sm:px-6 lg:px-0 lg:py-0">
+      <div class="lg:relative lg:aspect-[1024/586] lg:w-full">
+        <h3
+          class="font-display text-bone text-3xl uppercase sm:text-4xl lg:absolute lg:top-[3%] lg:right-[5%] lg:z-10 lg:text-[4.4vw] lg:leading-none"
+          data-fade
+        >
+          RENOVATIONS
+        </h3>
+        <div class="mt-6 flex flex-col gap-4 lg:mt-0 lg:block" data-fade-group>
+          <div class="lg:absolute lg:top-[28%] lg:left-[15.3%] lg:z-10 lg:h-[70%] lg:w-[19.7%]">
+            <Photo src={renoStaircase} alt="Renovated staircase with ring chandelier and dark tile" ratio="fill" class="aspect-[3/4] lg:aspect-auto" sizes="(min-width: 1024px) 20vw, 100vw" />
+          </div>
+          <div class="lg:absolute lg:top-0 lg:left-0 lg:h-[74%] lg:w-[15%]">
+            <Photo src={renoShelving} alt="Renovated hallway with wood door" ratio="fill" class="aspect-[3/4] lg:aspect-auto" sizes="(min-width: 1024px) 15vw, 100vw" />
+          </div>
+          <div class="lg:absolute lg:top-[11%] lg:left-[45.8%] lg:h-[87%] lg:w-[29.7%]">
+            <Photo src={renoKitchenette} alt="Compact kitchenette with orange gerbera flowers" ratio="fill" class="aspect-[4/3] lg:aspect-auto" sizes="(min-width: 1024px) 30vw, 100vw" />
+          </div>
+          <div class="lg:absolute lg:top-0 lg:left-[35.3%] lg:h-[83%] lg:w-[10.2%]">
+            <Photo src={renoWardrobe} alt="Light wood wardrobe doors" ratio="fill" class="aspect-[3/4] lg:aspect-auto" sizes="(min-width: 1024px) 10vw, 100vw" />
+          </div>
+          <div class="lg:absolute lg:top-[17.5%] lg:right-0 lg:h-[76.5%] lg:w-[24%]">
+            <Photo src={renoStaircase} alt="Renovated staircase seen from the upper landing" ratio="fill" class="hidden lg:block" sizes="24vw" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNTOWN CORPORATE — PDF page 65 -->
+  <section class="bg-cocoa" aria-label="Downtown Corporate project">
+    <div class="px-4 py-10 sm:px-6 lg:px-0 lg:py-0">
+      <div class="lg:relative lg:aspect-[1024/586] lg:w-full">
+        <h3
+          class="font-display text-bone text-3xl uppercase sm:text-4xl lg:absolute lg:top-[3.5%] lg:right-[3%] lg:z-10 lg:text-[4vw] lg:leading-none"
+          data-fade
+        >
+          DOWNTOWN CORPORATE
+        </h3>
+        <div class="mt-6 flex flex-col gap-4 lg:mt-0 lg:block" data-fade-group>
+          <div class="lg:absolute lg:top-[8%] lg:left-[4.8%] lg:h-[88%] lg:w-[33.2%]">
+            <Photo src={corpDining} alt="Condo dining table with sculptural glass bowl" ratio="fill" class="aspect-[3/4] lg:aspect-auto" sizes="(min-width: 1024px) 33vw, 100vw" />
+          </div>
+          <div class="lg:absolute lg:top-[20.5%] lg:left-[36.5%] lg:z-10 lg:h-[70.5%] lg:w-[27%]">
+            <Photo src={corpLiving} alt="Condo living room with large framed mirror and bench" ratio="fill" class="aspect-[3/4] lg:aspect-auto" sizes="(min-width: 1024px) 27vw, 100vw" />
+          </div>
+          <div class="lg:absolute lg:top-[14.5%] lg:left-[64%] lg:h-[80.5%] lg:w-[30%]">
+            <Photo src={corpKitchen} alt="Compact corporate kitchen with stainless appliances" ratio="fill" class="aspect-[4/3] lg:aspect-auto" sizes="(min-width: 1024px) 30vw, 100vw" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
