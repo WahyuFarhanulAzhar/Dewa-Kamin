@@ -12,11 +12,17 @@ interface Block {
   label: string;
 }
 
+/* Title positions, sizes and letter-spacing measured from the PDF text
+   spans (size/1024 -> cqw; tracking solved so the rendered width matches
+   the PDF's span width). */
 const blocks: Block[] = [
   {
     page: 57,
     bg: 'bg-cocoa',
-    title: { text: 'MODERN FARMHOUSE', class: 'lg:right-[6%] lg:top-[4%] lg:text-[5.1cqw]' },
+    title: {
+      text: 'MODERN FARMHOUSE',
+      class: 'lg:left-[40.1%] lg:top-[5.5%] lg:text-[5.08cqw] lg:tracking-[0.027em]',
+    },
     label: 'Modern Farmhouse project',
   },
   { page: 58, bg: 'bg-cocoa', label: 'Modern Farmhouse project' },
@@ -26,20 +32,29 @@ const blocks: Block[] = [
   {
     page: 62,
     bg: 'bg-taupe',
-    title: { text: 'RENOVATIONS', class: 'lg:right-[5%] lg:top-[3%] lg:text-[5.3cqw]' },
+    title: {
+      text: 'RENOVATIONS',
+      class: 'lg:left-[58.5%] lg:top-[1.3%] lg:text-[5.27cqw] lg:tracking-[0.029em]',
+    },
     label: 'Renovations project',
   },
   { page: 63, bg: 'bg-cocoa', label: 'Renovations project' },
   {
     page: 64,
     bg: 'bg-cocoa',
-    title: { text: 'DOWNTOWN CORPORATE', class: 'lg:right-[3%] lg:top-[4%] lg:text-[4.6cqw]' },
+    title: {
+      text: 'DOWNTOWN CORPORATE',
+      class: 'lg:left-[38.8%] lg:top-[6%] lg:text-[4.78cqw] lg:tracking-[0.054em]',
+    },
     label: 'Downtown Corporate project',
   },
   {
     page: 65,
     bg: 'bg-cocoa',
-    title: { text: 'DOWNTOWN CORPORATE', class: 'lg:right-[3%] lg:top-[3.5%] lg:text-[4.6cqw]' },
+    title: {
+      text: 'DOWNTOWN CORPORATE',
+      class: 'lg:left-[40.8%] lg:top-[4.4%] lg:text-[4.59cqw] lg:tracking-[0.054em]',
+    },
     label: 'Downtown Corporate project',
   },
 ];

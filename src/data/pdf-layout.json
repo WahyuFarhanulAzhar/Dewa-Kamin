@@ -1515,14 +1515,14 @@
   "images": [
    {
     "file": "p57-1.jpg",
-    "x": 31.01,
-    "y": 14.47,
-    "w": 67.94,
-    "h": 79.03,
+    "x": 31.0,
+    "y": 14.4,
+    "w": 52.3,
+    "h": 78.6,
     "z": 1,
     "px": [
      2000,
-     1333
+     1721
     ],
     "alt": "Farmhouse kitchen with cream cabinetry and black island"
    },
@@ -1559,13 +1559,13 @@
    },
    {
     "file": "p58-2.jpg",
-    "x": 63.42,
-    "y": 2.82,
-    "w": 33.75,
-    "h": 88.49,
+    "x": 63.4,
+    "y": 4.1,
+    "w": 33.6,
+    "h": 85.9,
     "z": 2,
     "px": [
-     1333,
+     1367,
      2000
     ],
     "alt": "Farmhouse dining room with crystal chandelier and display cabinet"
@@ -1590,13 +1590,13 @@
    },
    {
     "file": "p59-2.jpg",
-    "x": 14.01,
-    "y": 0.0,
-    "w": 35.43,
-    "h": 90.0,
+    "x": 14.0,
+    "y": 5.7,
+    "w": 35.3,
+    "h": 84.1,
     "z": 2,
     "px": [
-     1377,
+     1468,
      2000
     ],
     "alt": "Farmhouse entry with dark wood door and frosted glass"
@@ -1647,13 +1647,13 @@
    },
    {
     "file": "p60-2.jpg",
-    "x": 45.13,
-    "y": 0.0,
-    "w": 40.26,
-    "h": 100.0,
+    "x": 45.1,
+    "y": 7.5,
+    "w": 40.1,
+    "h": 92.3,
     "z": 2,
     "px": [
-     1408,
+     1518,
      2000
     ],
     "alt": "Farmhouse hallway with roman shade and patterned rug"
@@ -1673,13 +1673,13 @@
    },
    {
     "file": "p60-4.jpg",
-    "x": 64.67,
-    "y": 3.82,
-    "w": 35.33,
-    "h": 92.71,
+    "x": 64.6,
+    "y": 7.4,
+    "w": 31.8,
+    "h": 88.9,
     "z": 4,
     "px": [
-     1332,
+     1247,
      2000
     ],
     "alt": "Console with artwork and glass lamp"
@@ -1717,13 +1717,13 @@
    },
    {
     "file": "p61-3.jpg",
-    "x": 44.76,
-    "y": 0.71,
-    "w": 37.63,
-    "h": 98.59,
+    "x": 44.7,
+    "y": 3.9,
+    "w": 37.5,
+    "h": 92.0,
     "z": 3,
     "px": [
-     1333,
+     1421,
      2000
     ],
     "alt": "Farmhouse island with pendant lights"
@@ -1748,13 +1748,13 @@
   "images": [
    {
     "file": "p62-1.jpg",
-    "x": 62.54,
-    "y": 1.53,
-    "w": 37.46,
-    "h": 93.99,
+    "x": 62.5,
+    "y": 17.6,
+    "w": 37.3,
+    "h": 75.2,
     "z": 1,
     "px": [
-     1392,
+     1731,
      2000
     ],
     "alt": "Renovated staircase with black railing and lantern pendants"
@@ -1787,14 +1787,14 @@
    },
    {
     "file": "p62-4.jpg",
-    "x": 1.11,
-    "y": 18.46,
-    "w": 39.46,
-    "h": 81.54,
+    "x": 1.1,
+    "y": 18.4,
+    "w": 39.3,
+    "h": 57.3,
     "z": 4,
     "px": [
-     1692,
-     2000
+     2000,
+     1667
     ],
     "alt": "Ring chandelier over the renovated staircase"
    },
@@ -1831,27 +1831,27 @@
    },
    {
     "file": "p63-2.jpg",
-    "x": 2.38,
-    "y": 4.78,
-    "w": 34.48,
-    "h": 90.41,
+    "x": 5.7,
+    "y": 4.8,
+    "w": 31.0,
+    "h": 77.0,
     "z": 2,
     "px": [
-     1333,
+     1408,
      2000
     ],
     "alt": "Renovated bathroom vanity with tulips and red door"
    },
    {
     "file": "p63-3.jpg",
-    "x": 69.76,
-    "y": 3.59,
-    "w": 30.24,
-    "h": 94.63,
+    "x": 69.7,
+    "y": 3.5,
+    "w": 26.3,
+    "h": 94.3,
     "z": 3,
     "px": [
-     333,
-     597
+     289,
+     594
     ],
     "alt": "Custom wood shelving in the renovated closet"
    },
@@ -1945,13 +1945,13 @@
    },
    {
     "file": "p65-2.jpg",
-    "x": 36.39,
-    "y": 17.56,
-    "w": 28.33,
-    "h": 74.3,
+    "x": 36.4,
+    "y": 20.5,
+    "w": 28.1,
+    "h": 67.5,
     "z": 2,
     "px": [
-     1333,
+     1455,
      2000
     ],
     "alt": "Condo living room with large framed mirror and bench"
@@ -1959,12 +1959,12 @@
    {
     "file": "p65-3.jpg",
     "x": 61.4,
-    "y": 12.79,
-    "w": 32.21,
-    "h": 84.53,
+    "y": 14.3,
+    "w": 32.0,
+    "h": 81.4,
     "z": 3,
     "px": [
-     1333,
+     1375,
      2000
     ],
     "alt": "Compact corporate kitchen in light wood"
