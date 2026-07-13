@@ -68,10 +68,18 @@ body {
   background-color: var(--color-paper);
 }
 
-/* Anchor targets clear the sticky navbar when scrolled to */
+/* Anchor targets clear the sticky navbar when scrolled to.
+   Lenis reads this too — keep it in sync with the navbar height. */
 section[id],
 [id="top"] {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  section[id],
+  [id="top"] {
+    scroll-margin-top: 6rem;
+  }
 }
 
 /* Microinteraction: nav & footer links get an animated underline */

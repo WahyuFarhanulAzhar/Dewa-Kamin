@@ -3,6 +3,7 @@ import '@fontsource/arapey';
 import '@fontsource-variable/eb-garamond';
 import '@fontsource-variable/montserrat';
 import '../styles/global.css';
+import foglihtenUrl from '../assets/fonts/FoglihtenNo06.woff2?url';
 
 interface Props {
   title: string;
@@ -48,6 +49,7 @@ const localBusinessSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="font" type="font/woff2" href={foglihtenUrl} crossorigin />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>

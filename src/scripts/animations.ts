@@ -16,17 +16,17 @@ if (!reduceMotion) {
 
   // --- Lenis smooth scroll, driven by GSAP's ticker ---
   const lenis = new Lenis({ autoRaf: false });
+  if (import.meta.env.DEV) (window as unknown as { lenis: Lenis }).lenis = lenis;
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
   });
   gsap.ticker.lagSmoothing(0);
 
-  // Route anchor navigation through Lenis. The offset must match the
-  // sticky navbar's real height (it differs per breakpoint), measured at
-  // click time; "#top" always returns to the absolute top of the page.
-  const header = document.querySelector<HTMLElement>('header');
-  const navOffset = () => -(header?.offsetHeight ?? 0);
+  // Route anchor navigation through Lenis. Lenis already honors the
+  // sections' CSS scroll-margin-top (sized to the sticky navbar per
+  // breakpoint in global.css), so no extra offset here — adding one
+  // would double it. "#top" returns to the absolute top of the page.
   document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       const href = link.getAttribute('href');
@@ -37,7 +37,7 @@ if (!reduceMotion) {
       if (href === '#top') {
         lenis.scrollTo(0);
       } else {
-        lenis.scrollTo(target, { offset: navOffset() });
+        lenis.scrollTo(target);
       }
       history.pushState(null, '', href);
     });
@@ -47,7 +47,7 @@ if (!reduceMotion) {
   window.addEventListener('load', () => {
     if (!location.hash) return;
     const target = document.querySelector<HTMLElement>(location.hash);
-    if (target) lenis.scrollTo(target, { offset: navOffset(), immediate: true });
+    if (target) lenis.scrollTo(target, { immediate: true });
   });
 
   // --- Fade-ins ---
