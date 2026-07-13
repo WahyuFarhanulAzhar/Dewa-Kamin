@@ -27,3 +27,7 @@ pnpm-debug.log*
 Copy_of_DEWAKAMINWEBSITE.pdf
 ScreenShot Design from PDF/
 /assets/
+
+# local tooling
+.vscode/
+.claude/

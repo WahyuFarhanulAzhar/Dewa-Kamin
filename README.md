@@ -30,6 +30,17 @@ npm run preview   # preview the production build
 └── astro.config.mjs
 ```
 
+## Deploy (Vercel)
+
+Push this repository to GitHub, then import it on Vercel — the **source** gets pushed, and Vercel runs the build itself (`dist/`, `node_modules/` and the raw client material are gitignored on purpose):
+
+- Framework preset: **Astro** (auto-detected)
+- Build command: `npm run build`
+- Output directory: `dist`
+- No environment variables needed
+
+Before going live on the final domain, update `site` in [astro.config.mjs](astro.config.mjs) and the sitemap URL in [public/robots.txt](public/robots.txt) to match it (canonical/OG/sitemap URLs derive from `site`).
+
 ## Status
 
 First working version with **placeholder image blocks** — real photography and the studio video will be dropped in later. See [docs/assets-needed.md](docs/assets-needed.md) for the full list of assets still needed, and [docs/brief.md](docs/brief.md) for scope and open items.
