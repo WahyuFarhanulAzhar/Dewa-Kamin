@@ -22,18 +22,32 @@ if (!reduceMotion) {
   });
   gsap.ticker.lagSmoothing(0);
 
-  // Route anchor navigation through Lenis (sticky navbar offset)
-  const NAV_OFFSET = -96;
+  // Route anchor navigation through Lenis. The offset must match the
+  // sticky navbar's real height (it differs per breakpoint), measured at
+  // click time; "#top" always returns to the absolute top of the page.
+  const header = document.querySelector<HTMLElement>('header');
+  const navOffset = () => -(header?.offsetHeight ?? 0);
   document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       const href = link.getAttribute('href');
       if (!href || href === '#') return;
-      const target = document.querySelector(href);
+      const target = document.querySelector<HTMLElement>(href);
       if (!target) return;
       event.preventDefault();
-      lenis.scrollTo(target as HTMLElement, { offset: href === '#top' ? 0 : NAV_OFFSET });
+      if (href === '#top') {
+        lenis.scrollTo(0);
+      } else {
+        lenis.scrollTo(target, { offset: navOffset() });
+      }
       history.pushState(null, '', href);
     });
+  });
+
+  // Land correctly when the page is opened with a #hash in the URL
+  window.addEventListener('load', () => {
+    if (!location.hash) return;
+    const target = document.querySelector<HTMLElement>(location.hash);
+    if (target) lenis.scrollTo(target, { offset: navOffset(), immediate: true });
   });
 
   // --- Fade-ins ---

@@ -18,12 +18,21 @@ const ALT = {
   x0-45.6 y43.4-100. Canvas capped so header + hero fit in 100svh.
 -->
 <section id="top" class="to-fog/60 bg-gradient-to-b from-white" aria-label="Introduction">
+  <!-- Single accessible h1; the visual headlines below are per-breakpoint duplicates -->
+  <h1 class="sr-only">
+    Residential, commercial, hospitality, and retail interiors defined by craft, context, and
+    lasting design intent
+  </h1>
+
   <!-- Mobile / tablet: stacked -->
   <div class="flex flex-col gap-3 px-4 pt-6 pb-8 sm:px-6 lg:hidden" data-fade-group>
-    <h1 class="font-hero text-accent text-center text-[26px] leading-[1.08] text-balance sm:text-3xl">
+    <p
+      aria-hidden="true"
+      class="font-hero text-accent text-center text-[26px] leading-[1.08] text-balance sm:text-3xl"
+    >
       Residential, commercial, hospitality, and retail interiors defined by craft, context, and
       lasting design intent
-    </h1>
+    </p>
     <Photo src={cabinet} alt={ALT.cabinet} ratio="1/1" loading="eager" />
     <Photo src={fireplace} alt={ALT.fireplace} ratio="3/4" loading="eager" />
     <Photo src={exterior} alt={ALT.exterior} ratio="3/2" loading="eager" />
@@ -41,12 +50,13 @@ const ALT = {
       <div class="absolute" style="left: 0; bottom: 0; width: 45.6%; height: 56.6%; z-index: 3;">
         <Photo src={exterior} alt={ALT.exterior} ratio="fill" sizes="46vw" loading="eager" />
       </div>
-      <h1
+      <p
+        aria-hidden="true"
         class="font-hero text-accent absolute top-[1.8%] left-0 z-10 w-[46.4%] text-center text-[3.478cqw] leading-[0.99] tracking-normal"
       >
         Residential, commercial, hospitality, and retail interiors defined by craft, context, and
         lasting design intent
-      </h1>
+      </p>
     </div>
   </div>
 </section>
