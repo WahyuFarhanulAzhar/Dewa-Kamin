@@ -1,0 +1,53 @@
+---
+/**
+ * Renders one page of the client PDF as a full-bleed collage.
+ * Image boxes come from src/data/pdf-layout.json (exact bounding boxes
+ * measured from the PDF); the images themselves are the exact crops
+ * extracted from it (src/assets/photos/pdf/). Desktop: absolute canvas
+ * with the PDF page's aspect ratio. Mobile: stacked column.
+ */
+import Photo from './Photo.astro';
+import type { ImageMetadata } from 'astro';
+import layout from '../data/pdf-layout.json';
+
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/photos/pdf/*.jpg', {
+  eager: true,
+});
+
+interface Props {
+  page: number;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { page, class: className = '', loading = 'lazy' } = Astro.props;
+const data = (layout as Record<string, { aspect: number; images: any[] }>)[String(page)];
+if (!data) throw new Error(`CollagePage: page ${page} missing from pdf-layout.json`);
+---
+
+<div
+  class:list={[
+    'relative flex flex-col gap-3 px-4 py-5 sm:px-6 lg:block lg:aspect-(--pa) lg:w-full lg:p-0',
+    className,
+  ]}
+  style={`--pa: ${data.aspect};`}
+  data-fade-group
+>
+  {
+    data.images.map((im) => (
+      <div
+        class="aspect-(--ar) relative w-full lg:absolute lg:left-(--x) lg:top-(--y) lg:h-(--h) lg:w-(--w) lg:aspect-auto"
+        style={`--ar: ${im.px[0]}/${im.px[1]}; --x: ${im.x}%; --y: ${im.y}%; --w: ${im.w}%; --h: ${im.h}%; z-index: ${im.z};`}
+      >
+        <Photo
+          src={photos[`../assets/photos/pdf/${im.file}`].default}
+          alt={im.alt}
+          ratio="fill"
+          sizes={`(min-width: 1024px) ${Math.round(im.w)}vw, 100vw`}
+          loading={loading}
+        />
+      </div>
+    ))
+  }
+  <slot />
+</div>

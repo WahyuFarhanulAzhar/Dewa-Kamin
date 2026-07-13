@@ -1,68 +1,69 @@
 ---
 import Photo from './Photo.astro';
-import staircase from '../assets/photos/hero-staircase-foyer.jpg';
-import cabinet from '../assets/photos/hero-display-cabinet.jpg';
-import fireplace from '../assets/photos/hero-fireplace.jpg';
-import exterior from '../assets/photos/hero-exterior-dusk.jpg';
+import type { ImageMetadata } from 'astro';
+import layout from '../data/pdf-layout.json';
+
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/photos/pdf/*.jpg', {
+  eager: true,
+});
+const page = (layout as Record<string, { aspect: number; images: any[] }>)['3'];
+const img = (n: number) => photos[`../assets/photos/pdf/${page.images[n].file}`].default;
 ---
 
-<!-- Full-bleed collage; positions replicate PDF page 3 (1024x550 canvas) -->
+<!--
+  PDF page 3, full-bleed. On desktop the canvas keeps the PDF's 1024:550
+  aspect but is capped so announcement bar + navbar + hero fit in 100svh.
+-->
 <section id="top" class="to-fog/60 bg-gradient-to-b from-white" aria-label="Introduction">
   <!-- Mobile / tablet: stacked -->
-  <div class="flex flex-col gap-4 px-4 pt-8 pb-10 sm:px-6 lg:hidden" data-fade-group>
-    <h1 class="font-hero text-accent text-center text-3xl leading-[1.3] text-balance sm:text-4xl">
+  <div class="flex flex-col gap-3 px-4 pt-6 pb-8 sm:px-6 lg:hidden" data-fade-group>
+    <h1 class="font-hero text-accent text-center text-[26px] leading-[1.32] text-balance sm:text-3xl">
       Residential, commercial, hospitality, and retail interiors defined by craft, context, and
       lasting design intent
     </h1>
-    <Photo src={staircase} alt="Floating wood staircase with sculptural iron balusters beside the front entry" ratio="3/4" loading="eager" />
-    <Photo src={cabinet} alt="Dark wood display cabinet with glass doors beside a dining table" ratio="2/3" loading="eager" />
-    <Photo src={fireplace} alt="Marble fireplace with abstract artwork, wall sconces and a pendant light" ratio="3/4" />
-    <Photo src={exterior} alt="Stone home exterior at dusk with a car parked in the driveway" ratio="3/2" />
+    {
+      page.images.map((im) => (
+        <div class="aspect-(--ar) relative w-full" style={`--ar: ${im.px[0]}/${im.px[1]};`}>
+          <Photo
+            src={photos[`../assets/photos/pdf/${im.file}`].default}
+            alt={im.alt}
+            ratio="fill"
+            loading="eager"
+          />
+        </div>
+      ))
+    }
   </div>
 
-  <!-- Desktop: absolute collage on a 1024:550 canvas -->
-  <div class="relative hidden aspect-[1024/550] w-full lg:block" data-fade-group>
-    <div class="absolute top-0 left-[32.5%] h-[42.5%] w-[13.1%]">
-      <Photo
-        src={staircase}
-        alt="Floating wood staircase with sculptural iron balusters beside the front entry"
-        ratio="fill"
-        sizes="14vw"
-        loading="eager"
-      />
-    </div>
-    <div class="absolute top-0 left-[46.4%] h-[80%] w-[28.8%]">
-      <Photo
-        src={cabinet}
-        alt="Dark wood display cabinet with glass doors beside a dining table"
-        ratio="fill"
-        sizes="29vw"
-        loading="eager"
-      />
-    </div>
-    <div class="absolute top-[30.3%] right-0 h-[65.6%] w-[25.8%]">
-      <Photo
-        src={fireplace}
-        alt="Marble fireplace with abstract artwork, wall sconces and a pendant light"
-        ratio="fill"
-        sizes="26vw"
-        loading="eager"
-      />
-    </div>
-    <div class="absolute bottom-0 left-0 h-[57%] w-[45.6%]">
-      <Photo
-        src={exterior}
-        alt="Stone home exterior at dusk with a car parked in the driveway"
-        ratio="fill"
-        sizes="46vw"
-        loading="eager"
-      />
-    </div>
-    <h1
-      class="font-hero text-accent absolute top-[3.5%] left-[5.5%] z-10 w-[39%] text-center text-[3.45vw] leading-[1.32]"
+  <!-- Desktop: PDF canvas, height-capped to the viewport -->
+  <div class="hidden lg:flex lg:h-[calc(100svh-9rem)] lg:justify-center">
+    <div
+      class="@container relative h-full max-w-full"
+      style={`aspect-ratio: ${page.aspect};`}
+      data-fade-group
     >
-      Residential, commercial, hospitality, and retail interiors defined by craft, context, and
-      lasting design intent
-    </h1>
+      {
+        page.images.map((im) => (
+          <div
+            class="absolute"
+            style={`left: ${im.x}%; top: ${im.y}%; width: ${im.w}%; height: ${im.h}%; z-index: ${im.z};`}
+          >
+            <Photo
+              src={photos[`../assets/photos/pdf/${im.file}`].default}
+              alt={im.alt}
+              ratio="fill"
+              sizes={`(min-width: 1024px) ${Math.round(im.w)}vw, 100vw`}
+              loading="eager"
+            />
+          </div>
+        ))
+      }
+      <h1
+        class="font-hero text-accent absolute top-[3.5%] left-[5.5%] z-10 w-[39%] text-center text-[3.45cqw] leading-[1.32]"
+      >
+        Residential, commercial, hospitality, and retail interiors defined by craft, context, and
+        lasting design intent
+      </h1>
+    </div>
   </div>
 </section>
