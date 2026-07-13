@@ -85,7 +85,8 @@
     ],
     "alt": "Stone home exterior against a dramatic dusk sky"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "6": {
   "aspect": 1.7468,
@@ -103,7 +104,8 @@
     ],
     "alt": "Stone home exterior at dusk with a car parked in the driveway"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "7": {
   "aspect": 1.7468,
@@ -147,7 +149,8 @@
     ],
     "alt": "Home exterior with landscaped garden and steps at dusk"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "8": {
   "aspect": 1.7468,
@@ -165,7 +168,8 @@
     ],
     "alt": "Home exterior at dusk with driveway and stone steps"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "9": {
   "aspect": 1.7468,
@@ -183,7 +187,8 @@
     ],
     "alt": "Grand front entrance with stone steps, planters and lantern light at dusk"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "10": {
   "aspect": 1.7468,
@@ -227,7 +232,8 @@
     ],
     "alt": "Woman at the front door beside potted planters"
    }
-  ]
+  ],
+  "bg": "#1f1c17"
  },
  "11": {
   "aspect": 1.7468,
@@ -245,7 +251,8 @@
     ],
     "alt": "Home office with staircase, persian rug and dark wood desk"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "12": {
   "aspect": 1.7468,
@@ -263,7 +270,8 @@
     ],
     "alt": "Desk and leather chair by sheer curtains in a home office"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "13": {
   "aspect": 1.7468,
@@ -281,7 +289,8 @@
     ],
     "alt": "Foyer with polished marble floor, round mirror and console"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "14": {
   "aspect": 1.7468,
@@ -312,7 +321,8 @@
     ],
     "alt": "Marble fireplace with abstract artwork, wall sconces and a pendant light"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "15": {
   "aspect": 1.7468,
@@ -343,7 +353,8 @@
     ],
     "alt": "Living room with charcoal sofa and gallery wall"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "16": {
   "aspect": 1.7468,
@@ -374,7 +385,8 @@
     ],
     "alt": "Built-in wood shelving styled with frames and objects"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "17": {
   "aspect": 1.7468,
@@ -392,7 +404,8 @@
     ],
     "alt": "Floating wood staircase with iron balusters beside the front entry"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "18": {
   "aspect": 1.7468,
@@ -410,7 +423,8 @@
     ],
     "alt": "Staircase landing and dark wood display cabinet beside the dining table"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "19": {
   "aspect": 1.7468,
@@ -428,7 +442,8 @@
     ],
     "alt": "Kitchen with wood island, pendant lights and dark marble backsplash"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "20": {
   "aspect": 1.7468,
@@ -459,7 +474,8 @@
     ],
     "alt": "Dark stone countertop and backsplash with styled objects"
    }
-  ]
+  ],
+  "bg": "#201b15"
  },
  "21": {
   "aspect": 1.7468,
@@ -503,7 +519,8 @@
     ],
     "alt": "Island sink with polished faucet on granite counter"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "22": {
   "aspect": 1.7468,
@@ -521,7 +538,8 @@
     ],
     "alt": "Range and dark quartz backsplash detail"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "23": {
   "aspect": 1.7468,
@@ -539,7 +557,8 @@
     ],
     "alt": "White kitchen with professional range and dark marble backsplash"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "24": {
   "aspect": 1.7468,
@@ -557,7 +576,8 @@
     ],
     "alt": "Kitchen island with dark wood cabinetry and black stone counter"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "25": {
   "aspect": 1.7468,
@@ -575,7 +595,8 @@
     ],
     "alt": "Dining area with glass display cabinet and lotus pendant light"
    }
-  ]
+  ],
+  "bg": "#4a4641"
  },
  "26": {
   "aspect": 1.7468,
@@ -606,7 +627,8 @@
     ],
     "alt": "Ring chandelier over the renovated staircase with dark tile"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "27": {
   "aspect": 1.7468,
@@ -637,7 +659,8 @@
     ],
     "alt": "Primary bedroom with upholstered bed and patterned rug"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "28": {
   "aspect": 1.7468,
@@ -668,7 +691,8 @@
     ],
     "alt": "Long floating vanity with backlit mirror in the dressing suite"
    }
-  ]
+  ],
+  "bg": "#8c371f"
  },
  "29": {
   "aspect": 1.7468,
@@ -699,7 +723,8 @@
     ],
     "alt": "White tulips on the bathroom counter"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "30": {
   "aspect": 1.7468,
@@ -730,7 +755,8 @@
     ],
     "alt": "White kitchen cabinetry with dark counters"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "31": {
   "aspect": 1.7468,
@@ -748,7 +774,8 @@
     ],
     "alt": "Dressing suite with long floating vanity and wide mirror"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "32": {
   "aspect": 1.7468,
@@ -766,7 +793,8 @@
     ],
     "alt": "Blue-tiled shower with glass enclosure and vanity"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "33": {
   "aspect": 1.7468,
@@ -784,7 +812,8 @@
     ],
     "alt": "Bathroom vanity with glass shower behind"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "34": {
   "aspect": 1.7468,
@@ -802,7 +831,8 @@
     ],
     "alt": "Walk-in closet with built-in shelving and drawers"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "35": {
   "aspect": 1.7468,
@@ -833,7 +863,8 @@
     ],
     "alt": "Bathroom with tub, vanity and glass shower"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "36": {
   "aspect": 1.7468,
@@ -877,7 +908,8 @@
     ],
     "alt": "Bathroom vanity with tulips and wall sconce"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "37": {
   "aspect": 1.7468,
@@ -895,7 +927,8 @@
     ],
     "alt": "Lower-level bar with wine fridge beside a mirrored home gym"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "38": {
   "aspect": 1.7468,
@@ -913,7 +946,8 @@
     ],
     "alt": "Bathroom with glass shower and floating vanity"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "39": {
   "aspect": 1.7468,
@@ -944,7 +978,8 @@
     ],
     "alt": "Built-in wood shelving styled with frames and objects"
    }
-  ]
+  ],
+  "bg": "#1b1813"
  },
  "40": {
   "aspect": 1.7468,
@@ -962,7 +997,8 @@
     ],
     "alt": "Sculptural staircase over black marble floor beside the living room"
    }
-  ]
+  ],
+  "bg": "#64615c"
  },
  "41": {
   "aspect": 1.7468,
@@ -980,7 +1016,8 @@
     ],
     "alt": "Kitchen with round dining table and dark marble accents"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "42": {
   "aspect": 1.7468,
@@ -998,7 +1035,8 @@
     ],
     "alt": "Formal living room with black marble floor and layered seating"
    }
-  ]
+  ],
+  "bg": "#1f1c17"
  },
  "43": {
   "aspect": 1.7468,
@@ -1029,7 +1067,8 @@
     ],
     "alt": "Marble fireplace with abstract artwork, wall sconces and a pendant light"
    }
-  ]
+  ],
+  "bg": "#1b1813"
  },
  "44": {
   "aspect": 1.7468,
@@ -1060,7 +1099,8 @@
     ],
     "alt": "Ring chandelier over the renovated staircase with dark tile"
    }
-  ]
+  ],
+  "bg": "#1b1813"
  },
  "45": {
   "aspect": 1.7468,
@@ -1078,7 +1118,8 @@
     ],
     "alt": "Stone entrance steps through landscaped garden"
    }
-  ]
+  ],
+  "bg": "#64615c"
  },
  "46": {
   "aspect": 1.7468,
@@ -1135,7 +1176,8 @@
     ],
     "alt": "Bedside detail with sconce and orange cushion"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "47": {
   "aspect": 1.7468,
@@ -1179,7 +1221,8 @@
     ],
     "alt": "Lotus pendant light over the kitchen"
    }
-  ]
+  ],
+  "bg": "#c7c4c1"
  },
  "48": {
   "aspect": 1.7468,
@@ -1210,7 +1253,8 @@
     ],
     "alt": "Staircase with wavy iron balusters seen from the upper landing"
    }
-  ]
+  ],
+  "bg": "#1f1c17"
  },
  "49": {
   "aspect": 1.7468,
@@ -1241,7 +1285,8 @@
     ],
     "alt": "Stone garden wall with iron railing and red flowers"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "50": {
   "aspect": 1.7468,
@@ -1272,7 +1317,8 @@
     ],
     "alt": "Balcony view over the driveway at blue hour"
    }
-  ]
+  ],
+  "bg": "#1f1b1a"
  },
  "51": {
   "aspect": 1.7468,
@@ -1316,7 +1362,8 @@
     ],
     "alt": "Glass display cabinet with blue vase"
    }
-  ]
+  ],
+  "bg": "#252626"
  },
  "54": {
   "aspect": 1.3327,

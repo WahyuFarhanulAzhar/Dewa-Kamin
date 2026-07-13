@@ -21,8 +21,15 @@ interface Props {
 }
 
 const { page, class: className = '', loading = 'lazy' } = Astro.props;
-const data = (layout as Record<string, { aspect: number; images: any[] }>)[String(page)];
+const data = (layout as Record<string, { aspect: number; images: any[]; bg?: string }>)[
+  String(page)
+];
 if (!data) throw new Error(`CollagePage: page ${page} missing from pdf-layout.json`);
+
+/* Each PDF gallery page has its own background color (sampled from the
+   PDF itself) — some pages are charcoal, some cocoa, a few are rust,
+   taupe or light gray. */
+const bgStyle = data.bg ? ` background-color: ${data.bg};` : '';
 ---
 
 <div
@@ -30,7 +37,7 @@ if (!data) throw new Error(`CollagePage: page ${page} missing from pdf-layout.js
     'relative flex flex-col gap-3 py-4 lg:block lg:aspect-(--pa) lg:w-full lg:py-0',
     className,
   ]}
-  style={`--pa: ${data.aspect};`}
+  style={`--pa: ${data.aspect};${bgStyle}`}
   data-fade-group
 >
   {
