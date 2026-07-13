@@ -51,6 +51,7 @@
   --font-sans: "Montserrat Variable", Montserrat, sans-serif; /* contact values, footer links (Gilroy/Gotham substitute) */
 }
 
+/* Native fallback (no JS / reduced motion); Lenis overrides this when active */
 html {
   scroll-behavior: smooth;
 }

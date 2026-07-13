@@ -31,7 +31,7 @@ One-page static marketing site for a Toronto interior design studio, built with 
 2. **Every section must be fully responsive** (mobile / tablet / desktop). Collages must reflow cleanly on small screens.
 3. **Copy is final.** Never paraphrase, "improve", correct, or re-case any client copy. It is used verbatim from [docs/brief.md](docs/brief.md).
 4. **Use the design tokens** from [docs/design.md](docs/design.md) (defined in `src/styles/global.css`). Never hardcode colors or font names in components.
-5. **Keep client JS minimal.** Allowed scripts: the mobile menu toggle and the GSAP fade-in animations in `src/scripts/animations.ts` (elements opt in via `data-fade` / `data-fade-group`; disabled under `prefers-reduced-motion`). Smooth scroll is CSS-only. Do not add other client JS without need.
+5. **Keep client JS minimal.** Allowed scripts: the mobile menu toggle, and `src/scripts/animations.ts` (Lenis smooth scrolling driven by GSAP's ticker + ScrollTrigger fade-ins via `data-fade` / `data-fade-group`; anchors route through Lenis). All of it is disabled under `prefers-reduced-motion`, falling back to CSS smooth scroll. Do not add other client JS without need.
 
 ## Detail docs
 
