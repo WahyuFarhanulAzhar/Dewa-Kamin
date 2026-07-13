@@ -42,10 +42,11 @@ const strips = page.images.map((im, i) => ({ ...im, label: labels[i] }));
     </h2>
     {
       strips.map((im) => (
-        <div data-fade>
+        <>
           <div
             class="absolute"
             style={`left: ${im.x}%; top: ${im.y}%; width: ${im.w}%; height: ${im.h}%;`}
+            data-fade
           >
             <Photo
               src={photos[`../assets/photos/pdf/${im.file}`].default}
@@ -57,10 +58,11 @@ const strips = page.images.map((im, i) => ({ ...im, label: labels[i] }));
           <p
             class="font-body absolute z-10 text-[2.2cqw] tracking-[0.04em] uppercase"
             style={`left: ${im.x + 1}%; top: ${im.y + im.h + 1.2}%;`}
+            data-fade
           >
             {im.label}
           </p>
-        </div>
+        </>
       ))
     }
   </div>
