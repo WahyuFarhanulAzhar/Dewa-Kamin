@@ -9,13 +9,15 @@ const pages = Array.from({ length: 47 }, (_, i) => i + 5); // 5..51
 ---
 
 <section id="portfolio" class="bg-espresso" aria-label="Portfolio gallery">
-  <h2 class="sr-only">Portfolio</h2>
-  {
-    pages.map((page, i) => (
-      <>
-        {i > 0 && <hr class="mx-auto max-w-[1280px] border-t border-white/15" />}
-        <CollagePage page={page} class="lg:py-0" />
-      </>
-    ))
-  }
+  <div class="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-10 lg:py-8">
+    <h2 class="sr-only">Portfolio</h2>
+    {
+      pages.map((page, i) => (
+        <>
+          {i > 0 && <hr class="my-3 border-t border-white/15 lg:my-5" />}
+          <CollagePage page={page} />
+        </>
+      ))
+    }
+  </div>
 </section>

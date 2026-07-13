@@ -17,8 +17,9 @@ const strips = page.images.map((im, i) => ({ ...im, label: labels[i] }));
 ---
 
 <section class="bg-espresso text-bone" aria-label="Projects">
+  <div class="mx-auto max-w-[1440px] px-4 py-6 sm:px-6 lg:px-10 lg:py-10">
   <!-- Mobile: stacked strips with labels -->
-  <div class="flex flex-col gap-6 px-4 py-10 sm:px-6 lg:hidden">
+  <div class="flex flex-col gap-6 lg:hidden">
     <h2 class="font-display text-4xl uppercase sm:text-5xl" data-fade>PROJECTS</h2>
     {
       strips.map((im) => (
@@ -65,5 +66,6 @@ const strips = page.images.map((im, i) => ({ ...im, label: labels[i] }));
         </>
       ))
     }
+  </div>
   </div>
 </section>

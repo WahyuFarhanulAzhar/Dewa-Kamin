@@ -48,7 +48,8 @@ const blocks: Block[] = [
 <div aria-label="Project showcases">
   {
     blocks.map((block) => (
-      <section class:list={[block.bg, '@container']} aria-label={block.label}>
+      <section class:list={[block.bg]} aria-label={block.label}>
+        <div class="@container mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-10 lg:py-6">
         <CollagePage page={block.page}>
           {block.title && (
             <h3
@@ -62,6 +63,7 @@ const blocks: Block[] = [
             </h3>
           )}
         </CollagePage>
+        </div>
       </section>
     ))
   }
