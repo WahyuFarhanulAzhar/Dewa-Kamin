@@ -4,59 +4,46 @@ import cabinet from '../assets/photos/pdf/p03-1.jpg';
 import fireplace from '../assets/photos/pdf/p03-2.jpg';
 import exterior from '../assets/photos/pdf/p03-3.jpg';
 
-const ALT = {
-  cabinet: 'Staircase landing and dark wood display cabinet beside the dining table',
-  fireplace: 'Marble fireplace with abstract artwork, wall sconces and a pendant light',
-  exterior: 'Stone home exterior at dusk with a car parked in the driveway',
-};
+/* Boxes and text metrics measured from PDF page 3 (1024x550 canvas). */
+const images = [
+  { src: cabinet, alt: 'Staircase landing and dark wood display cabinet beside the dining table', box: 'lg:left-[32.4%] lg:top-0 lg:w-[43.2%] lg:h-[80%]', z: 1, sizes: '(min-width: 1024px) 44vw, 100vw' },
+  { src: fireplace, alt: 'Marble fireplace with abstract artwork, wall sconces and a pendant light', box: 'lg:left-[76.9%] lg:top-[28%] lg:w-[23.1%] lg:h-[70%]', z: 2, sizes: '(min-width: 1024px) 24vw, 100vw' },
+  { src: exterior, alt: 'Stone home exterior at dusk with a car parked in the driveway', box: 'lg:left-0 lg:top-[43.4%] lg:w-[45.6%] lg:h-[56.6%]', z: 3, sizes: '(min-width: 1024px) 46vw, 100vw' },
+];
 ---
 
 <!--
-  PDF page 3, full-bleed. Boxes and text metrics measured from the PDF:
-  headline block x0-46.4% centered, 35.63pt (3.478cqw), line-height 0.99;
-  cabinet photo x32.4-75.6 y0-80; fireplace x76.9-100 y28-98; exterior
-  x0-45.6 y43.4-100. Canvas capped so header + hero fit in 100svh.
+  PDF page 3. One responsive node set: stacked column on mobile, absolute
+  canvas (aspect 1024:550, height-capped to 100svh with the header) at lg.
 -->
 <section id="top" class="to-fog/60 bg-gradient-to-b from-white" aria-label="Introduction">
-  <!-- Single accessible h1; the visual headlines below are per-breakpoint duplicates -->
   <h1 class="sr-only">
     Residential, commercial, hospitality, and retail interiors defined by craft, context, and
     lasting design intent
   </h1>
 
-  <!-- Mobile / tablet: stacked -->
-  <div class="flex flex-col gap-3 px-4 pt-6 pb-8 sm:px-6 lg:hidden" data-fade-group>
-    <p
-      aria-hidden="true"
-      class="font-hero text-accent text-center text-[26px] leading-[1.08] text-balance sm:text-3xl"
+  <div class="mx-auto max-w-[1440px] lg:flex lg:h-[calc(100svh-9rem)] lg:justify-center lg:px-10">
+    <div
+      class="@container relative flex flex-col gap-3 px-4 pt-6 pb-8 sm:px-6 lg:block lg:aspect-[1024/550] lg:h-full lg:max-w-full lg:p-0"
+      data-fade-group
     >
-      Residential, commercial, hospitality, and retail interiors defined by craft, context, and
-      lasting design intent
-    </p>
-    <Photo src={cabinet} alt={ALT.cabinet} ratio="1/1" loading="eager" />
-    <Photo src={fireplace} alt={ALT.fireplace} ratio="3/4" loading="eager" />
-    <Photo src={exterior} alt={ALT.exterior} ratio="3/2" loading="eager" />
-  </div>
-
-  <!-- Desktop: PDF canvas, height-capped to the viewport, same 1440px container as all sections -->
-  <div class="mx-auto hidden max-w-[1440px] lg:flex lg:h-[calc(100svh-9rem)] lg:justify-center lg:px-10">
-    <div class="@container relative h-full max-w-full" style="aspect-ratio: 1024/550;" data-fade-group>
-      <div class="absolute" style="left: 32.4%; top: 0; width: 43.2%; height: 80%;">
-        <Photo src={cabinet} alt={ALT.cabinet} ratio="fill" sizes="44vw" loading="eager" />
-      </div>
-      <div class="absolute" style="left: 76.9%; top: 28%; width: 23.1%; height: 70%; z-index: 2;">
-        <Photo src={fireplace} alt={ALT.fireplace} ratio="fill" sizes="24vw" loading="eager" />
-      </div>
-      <div class="absolute" style="left: 0; bottom: 0; width: 45.6%; height: 56.6%; z-index: 3;">
-        <Photo src={exterior} alt={ALT.exterior} ratio="fill" sizes="46vw" loading="eager" />
-      </div>
       <p
         aria-hidden="true"
-        class="font-hero text-accent absolute top-[1.8%] left-0 z-10 w-[46.4%] text-center text-[3.478cqw] leading-[0.99] tracking-normal"
+        class="font-hero text-accent order-first text-center text-[26px] leading-[1.08] text-balance sm:text-3xl lg:absolute lg:top-[1.8%] lg:left-0 lg:z-10 lg:order-none lg:w-[46.4%] lg:text-[3.478cqw] lg:leading-[0.99] lg:tracking-normal lg:text-wrap"
       >
         Residential, commercial, hospitality, and retail interiors defined by craft, context, and
         lasting design intent
       </p>
+      {
+        images.map((im) => (
+          <div
+            class:list={['aspect-(--ar) relative w-full lg:absolute lg:aspect-auto', im.box]}
+            style={`--ar: ${im.src.width}/${im.src.height}; z-index: ${im.z};`}
+          >
+            <Photo src={im.src} alt={im.alt} ratio="fill" sizes={im.sizes} loading="eager" />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

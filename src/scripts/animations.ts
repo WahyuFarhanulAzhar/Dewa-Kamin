@@ -54,9 +54,9 @@ if (!reduceMotion) {
   gsap.utils.toArray<HTMLElement>('[data-fade]').forEach((el) => {
     gsap.fromTo(
       el,
-      { autoAlpha: 0, y: 28 },
+      { opacity: 0, y: 28 },
       {
-        autoAlpha: 1,
+        opacity: 1,
         y: 0,
         duration: 0.9,
         ease: 'power2.out',
@@ -68,9 +68,9 @@ if (!reduceMotion) {
   gsap.utils.toArray<HTMLElement>('[data-fade-group]').forEach((group) => {
     gsap.fromTo(
       group.children,
-      { autoAlpha: 0, y: 28 },
+      { opacity: 0, y: 28 },
       {
-        autoAlpha: 1,
+        opacity: 1,
         y: 0,
         duration: 0.9,
         ease: 'power2.out',
