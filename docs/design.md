@@ -36,28 +36,28 @@ Exact families extracted from the PDF. FoglihtenNo06 and CMU Serif are self-host
 
 ## Spacing
 
-- Section vertical padding: `py-16` mobile → `lg:py-24` desktop (gallery sub-groups: `py-12`/`py-16`).
-- Content container: `max-w-7xl mx-auto` with `px-4 sm:px-6 lg:px-10` gutters.
-- Collage gaps: `gap-4`–`gap-6` when stacked; overlaps via grid column overlap + margin offsets at `lg:`.
-- Body copy measure: `max-w-prose`.
+- The PDF canvas is 1024px wide; site sizes scale it by 1.25 to a 1280px container (`max-w-[1280px]`), except full-bleed sections (hero, showcases) which span the viewport.
+- Section vertical padding: `py-16` mobile → `lg:py-14`–`lg:py-20` desktop, matching each PDF page's own margins.
+- Collage gaps: `gap-4`–`gap-6` when stacked on mobile; at `lg:` collages use measured percentage positions/overlaps instead of gaps.
 
-## Per-section design notes
+## Per-section design notes (PDF page refs)
 
-1. **Announcement bar** — `accent` background, centered white uppercase body-font line. Static (not sticky).
-2. **Navbar** — `charcoal`, `sticky top-0 z-50`. Two-line logo (constrained to ~15ch) left, uppercase Cormorant links right. Below `md`: hamburger toggling a full-width dropdown panel (only client JS on the site). Anchor links scroll smoothly (CSS `scroll-behavior`), sections have `scroll-margin-top` so the sticky bar never covers them.
-3. **Hero** — light mist gradient. Red display headline top-left; 4-photo collage: staircase interior tucked behind the headline, tall cabinet portrait center (overlapping), fireplace shot offset lower right, large home exterior bottom-left. On mobile everything stacks: headline, then photos in order.
-4. **Philosophy** — `bg-gradient-to-br` mist. Left: B&W portrait letterboxed on a black panel (portrait pushed down from the heading line). Right: display heading + three body paragraphs + two-line signoff. Stacks portrait-first on mobile.
-5. **Gallery** — `charcoal` background, nine collage groups separated by `hr` lines (`white/20`), following the full PDF page order: exteriors → full-width exterior → entrance & person collage → office/living → staircase & dining → kitchens → bedrooms & staircase details → bathrooms & wellness → living rooms & outdoors. Groups mix centered single photos with overlapping 2–3 photo collages (grid column overlap + top-margin offsets at `lg:`). On mobile every collage flattens to a single stacked column with even gaps.
-6. **Video** — full-bleed `accent` band; centered 16:9 embed placeholder with play glyph. Final: YouTube/Vimeo iframe, lazy-loaded.
-7. **Services** — mist gradient. Huge lowercase `services` display heading; three service blocks (display sub-heading + plain body list) left, portrait photo right. Single column on mobile, photo last.
-8. **Design Process** — flat `mist-light`. Display heading; six steps in a 2-column staggered grid (even steps pushed down at `md:`), each step = image placeholder + `NN. TITLE` + paragraph. Single column mobile.
-9. **Projects** — `charcoal`. Display heading; four project rows, each a tight strip of 3–4 images (`gap-1`) with a Cormorant label beneath; rows alternate left/right alignment on desktop, stack full-width on mobile.
-10. **Contact** — mist gradient. Display `CONTACT` heading; centered red Cormorant subheading; thin divider; 2-column icon grid (address, phone, email, Instagram, LinkedIn, website) with inline SVG icons left, portrait photo right. Phone is `tel:`, emails are `mailto:`.
-11. **Footer** — `charcoal`; centered `BACK TO TOP` link (chevron, scrolls to `#top`), logo left + nav links right below it, then full-width `accent` bar with the copyright line.
+1. **Announcement bar** (p1) — `accent` background, centered white uppercase EB Garamond line. Static (not sticky).
+2. **Navbar** (p2) — `charcoal`, `sticky top-0 z-50`. Two-line FoglihtenNo06 logo left, uppercase EB Garamond links right. Below `md`: hamburger toggling a full-width dropdown panel. Anchor links scroll smoothly (CSS `scroll-behavior`), sections have `scroll-margin-top`.
+3. **Hero** (p3) — full-bleed `aspect-[1024/550]` canvas at `lg:`, children absolutely positioned at measured percentages: Arapey red headline top-left (6%/3.5%, 39% wide), staircase sliver behind it, tall cabinet flush to the top edge, fireplace bleeding off the right edge, exterior flush to the bottom-left corner. Mobile: stacked column.
+4. **Philosophy** (p4) — `bg-gradient-to-r from-white to-fog`. Left: B&W portrait letterboxed on a black panel (~34% wide, pushed below the heading line). Right: FoglihtenNo06 heading + three EB Garamond paragraphs + two-line signoff. Stacks portrait-first on mobile.
+5. **Gallery** (p5–45) — `espresso` background, nine collage groups separated by `hr` lines (`white/20`), following the PDF page order: exteriors → full-width exterior → entrance & person collage → office/living → staircase & dining → kitchens → bedrooms & staircase details → bathrooms & wellness → living rooms & outdoors. On mobile every collage flattens to a single stacked column.
+6. **Video** (p52) — full-bleed `rust` band; centered 16:9 embed placeholder with play glyph. Final: YouTube/Vimeo iframe, lazy-loaded.
+7. **Services** (p53) — `to-br from-white via-fog to-umber` gradient. Huge lowercase FoglihtenNo06 `services`; three CMU Serif blocks (nowrap titles, tight 1.3-leading lists) left, 2:3 photo right. Single column on mobile, photo last.
+8. **Design Process** (p54–55) — flat `mist-light`. Two "page" blocks, each repeating the FoglihtenNo06 heading like the PDF, with a hairline rule beneath and 3-column collage rows (image/text mixes with `border-hairline` vertical rules). Single column mobile.
+9. **Projects** (p56) — `espresso`, `bone` heading. Four photo strips at measured widths (72% / 55% / 53% / 47%, alternating left/right) with uniform row height and per-image width fractions; EB Garamond label beneath each strip.
+10. **Project showcases** (p57 / p62 / p65) — full-bleed `aspect-[1024/586]` collages for MODERN FARMHOUSE (`cocoa`), RENOVATIONS (`taupe`), DOWNTOWN CORPORATE (`cocoa`), each with a `bone` FoglihtenNo06 title overlaid top-right. Stacked cards on mobile.
+11. **Contact** (p66) — `to-r from-white to-fog` gradient. FoglihtenNo06 `CONTACT`; red FoglihtenNo06 subheading offset left-of-center; hairline rules above and below the body. Left column: address / phone / email / website; right column: Instagram / LinkedIn — labels in FoglihtenNo06, values in light Montserrat, `umber` icons. 2:3 photo right. Phone is `tel:`, emails are `mailto:`.
+12. **Footer** (p67–68) — `charcoal`; centered Montserrat `BACK TO TOP` (chevron, scrolls to `#top`), FoglihtenNo06 logo left + Montserrat nav links, then full-width `accent` copyright bar.
 
 ## Imagery
 
-All photos render through `src/components/Photo.astro` → `astro:assets` `<Image />` with `format="avif"`, `quality={60}`, `widths={[640, 1024, 1600]}` and per-slot `sizes`. The wrapper div carries the slot's `aspect-ratio` with `object-cover`, so collage compositions hold regardless of source crop. Hero images load eagerly; everything else lazy-loads.
+All photos render through `src/components/Photo.astro` → `astro:assets` `<Image />` with `format="avif"`, `quality={60}`, `widths={[640, 1024, 1600]}` and per-slot `sizes`. The wrapper div carries the slot's `aspect-ratio` (or `ratio="fill"` to fill an absolutely-positioned box) with `object-cover`, so collage compositions hold regardless of source crop. Hero images load eagerly; everything else lazy-loads.
 
 ## Motion
 
