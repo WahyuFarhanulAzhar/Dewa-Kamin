@@ -1,49 +1,57 @@
 ---
-import Photo from './Photo.astro';
-import cabinet from '../assets/photos/pdf/p03-1.jpg';
-import fireplace from '../assets/photos/pdf/p03-2.jpg';
-import exterior from '../assets/photos/pdf/p03-3.jpg';
-
-/* Boxes and text metrics measured from PDF page 3 (1024x550 canvas). */
-const images = [
-  { src: cabinet, alt: 'Staircase landing and dark wood display cabinet beside the dining table', box: 'lg:left-[32.4%] lg:top-0 lg:w-[43.2%] lg:h-[80%]', z: 1, sizes: '(min-width: 1024px) 44vw, 100vw' },
-  { src: fireplace, alt: 'Marble fireplace with abstract artwork, wall sconces and a pendant light', box: 'lg:left-[76.9%] lg:top-[28%] lg:w-[23.1%] lg:h-[70%]', z: 2, sizes: '(min-width: 1024px) 24vw, 100vw' },
-  { src: exterior, alt: 'Stone home exterior at dusk with a car parked in the driveway', box: 'lg:left-0 lg:top-[43.4%] lg:w-[45.6%] lg:h-[56.6%]', z: 3, sizes: '(min-width: 1024px) 46vw, 100vw' },
-];
+/**
+ * Hero — full-bleed background video (client feedback 2026-07-14,
+ * replacing the PDF page-3 collage) with the headline overlaid.
+ * Reuses the compressed studio video; faststart lets it stream
+ * progressively (~0.8 Mbps), and the poster paints immediately.
+ * Sized so announcement bar + navbar + hero fit in 100svh.
+ */
 ---
 
-<!--
-  PDF page 3. One responsive node set: stacked column on mobile, absolute
-  canvas (aspect 1024:550, height-capped to 100svh with the header) at lg.
--->
 <section id="top" aria-label="Introduction">
   <h1 class="sr-only">
     Residential, commercial, hospitality, and retail interiors defined by craft, context, and
     lasting design intent
   </h1>
 
-  <div class="mx-auto max-w-[1440px] lg:flex lg:h-[calc(100svh-9rem)] lg:justify-center lg:px-10">
-    <div
-      class="@container relative flex flex-col gap-3 px-4 pt-6 pb-8 sm:px-6 lg:block lg:aspect-[1024/550] lg:h-full lg:max-w-full lg:p-0"
-      data-fade-group
+  <div class="relative h-[calc(100svh-7.2rem)] w-full overflow-hidden lg:h-[calc(100svh-9rem)]">
+    <video
+      class="absolute inset-0 h-full w-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="/video/dewa-interior-design-poster.jpg"
+      aria-hidden="true"
+      tabindex="-1"
     >
+      <source src="/video/dewa-interior-design.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Legibility scrim: light wash on the left, like the design's gradient -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/35 to-transparent" aria-hidden="true"></div>
+
+    <div class="relative z-10 flex h-full items-center">
       <p
         aria-hidden="true"
-        class="font-hero text-accent order-first text-center text-[26px] leading-[1.08] text-balance sm:text-3xl lg:absolute lg:top-[1.8%] lg:left-0 lg:z-10 lg:order-none lg:w-[46.4%] lg:text-[3.478cqw] lg:leading-[0.99] lg:tracking-normal lg:text-wrap"
+        class="font-hero text-accent w-full px-6 text-center text-[clamp(26px,3.478vw,54px)] leading-[1.15] text-balance sm:px-10 lg:w-[48%] lg:px-0 lg:pl-[3%] lg:leading-[0.99]"
+        data-fade
       >
         Residential, commercial, hospitality, and retail interiors defined by craft, context, and
         lasting design intent
       </p>
-      {
-        images.map((im) => (
-          <div
-            class:list={['aspect-(--ar) relative w-full lg:absolute lg:aspect-auto', im.box]}
-            style={`--ar: ${im.src.width}/${im.src.height}; z-index: ${im.z};`}
-          >
-            <Photo src={im.src} alt={im.alt} ratio="fill" sizes={im.sizes} loading="eager" />
-          </div>
-        ))
-      }
     </div>
   </div>
 </section>
+
+<script>
+  // Respect prefers-reduced-motion: show the poster, don't autoplay
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const video = document.querySelector<HTMLVideoElement>('#top video');
+    if (video) {
+      video.removeAttribute('autoplay');
+      video.pause();
+    }
+  }
+</script>
