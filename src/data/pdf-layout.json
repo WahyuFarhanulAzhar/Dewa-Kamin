@@ -1458,53 +1458,53 @@
   "images": [
    {
     "file": "p56-1.jpg",
-    "x": 2.69,
-    "y": 10.73,
-    "w": 72.99,
-    "h": 18.92,
+    "x": 3.19,
+    "y": 10.7,
+    "w": 71.89,
+    "h": 18.8,
     "z": 1,
     "px": [
-     1006,
-     255
+     991,
+     252
     ],
     "alt": "Toronto Residence project photos: exterior with car, cabinet and dining, home office"
    },
    {
     "file": "p56-2.jpg",
-    "x": 41.49,
-    "y": 31.11,
-    "w": 55.86,
-    "h": 20.87,
+    "x": 41.44,
+    "y": 31.43,
+    "w": 55.76,
+    "h": 20.13,
     "z": 2,
     "px": [
-     1143,
-     418
+     1140,
+     403
     ],
     "alt": "Modern Farmhouse project photos: chandelier, two-tone kitchen and hallway"
    },
    {
     "file": "p56-3.jpg",
-    "x": 3.68,
-    "y": 52.37,
-    "w": 53.07,
-    "h": 25.06,
+    "x": 3.97,
+    "y": 55.61,
+    "w": 52.64,
+    "h": 21.46,
     "z": 3,
     "px": [
-     547,
-     253
+     542,
+     217
     ],
     "alt": "Renovations project photos: staircase, kitchenette, wardrobe and shelving"
    },
    {
     "file": "p56-4.jpg",
-    "x": 52.02,
-    "y": 76.44,
-    "w": 42.02,
-    "h": 21.47,
+    "x": 51.98,
+    "y": 78.27,
+    "w": 41.9,
+    "h": 17.67,
     "z": 4,
     "px": [
-     573,
-     287
+     570,
+     236
     ],
     "alt": "Downtown Corporate project photos: kitchen, dining table and artwork"
    }
