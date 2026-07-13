@@ -1,23 +1,27 @@
 ---
 /**
  * Portfolio gallery — PDF pages 5-51 rendered 1:1 via CollagePage.
- * Thin dividers mark the original page boundaries, as in the design.
+ * Each page's PDF-sampled background color spans the full viewport
+ * width; the collage canvas sits in the shared 1440px container with
+ * its own padding.
  */
 import CollagePage from './CollagePage.astro';
+import layout from '../data/pdf-layout.json';
 
 const pages = Array.from({ length: 47 }, (_, i) => i + 5); // 5..51
+const bg = (page: number) =>
+  (layout as Record<string, { bg?: string }>)[String(page)]?.bg ?? '#1f1c17';
 ---
 
 <section id="portfolio" class="bg-espresso" aria-label="Portfolio gallery">
-  <div class="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-10 lg:py-8">
-    <h2 class="sr-only">Portfolio</h2>
-    {
-      pages.map((page, i) => (
-        <>
-          {i > 0 && <hr class="my-3 border-t border-white/15 lg:my-5" />}
+  <h2 class="sr-only">Portfolio</h2>
+  {
+    pages.map((page) => (
+      <div style={`background-color: ${bg(page)};`}>
+        <div class="mx-auto max-w-[1440px] px-4 py-3 sm:px-6 lg:px-10 lg:py-6">
           <CollagePage page={page} />
-        </>
-      ))
-    }
-  </div>
+        </div>
+      </div>
+    ))
+  }
 </section>
