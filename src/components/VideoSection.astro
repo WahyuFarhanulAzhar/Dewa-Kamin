@@ -1,15 +1,18 @@
 <!--
-  Self-hosted studio video (compressed 720p H.264 from
-  "DEWA INTERIOR DESIGN VIDEO-FINAL_Rev8.mp4"). preload="none" + poster
-  keeps it off the critical path: nothing downloads until the visitor
-  presses play.
+  Studio video band — ambient playback per client feedback: autoplay
+  (muted, looped, no controls), starting only when scrolled into view
+  so it doesn't compete with the hero video for bandwidth on load.
+  Reduced-motion users get the still poster instead.
 -->
 <section class="bg-rust" aria-label="Studio video">
   <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12">
     <video
+      id="studio-video"
       class="aspect-video w-full"
-      controls
-      preload="none"
+      muted
+      loop
+      playsinline
+      preload="metadata"
       poster="/video/dewa-interior-design-poster.jpg"
       title="DEWA INTERIOR DESIGN VIDEO"
       data-fade
@@ -19,3 +22,20 @@
     </video>
   </div>
 </section>
+
+<script>
+  const video = document.getElementById('studio-video') as HTMLVideoElement | null;
+  if (video && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(video);
+  }
+</script>
