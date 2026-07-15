@@ -15,7 +15,14 @@ if (!reduceMotion) {
   gsap.registerPlugin(ScrollTrigger);
 
   // --- Lenis smooth scroll, driven by GSAP's ticker ---
-  const lenis = new Lenis({ autoRaf: false });
+  // Tuned snappy (client feedback: default felt laggy): a high lerp
+  // keeps the page tracking the wheel closely, with just a short
+  // smoothing tail instead of a long floaty glide.
+  const lenis = new Lenis({
+    autoRaf: false,
+    lerp: 0.22,
+    wheelMultiplier: 1.2,
+  });
   if (import.meta.env.DEV) (window as unknown as { lenis: Lenis }).lenis = lenis;
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => {
@@ -35,9 +42,9 @@ if (!reduceMotion) {
       if (!target) return;
       event.preventDefault();
       if (href === '#top') {
-        lenis.scrollTo(0);
+        lenis.scrollTo(0, { duration: 1 });
       } else {
-        lenis.scrollTo(target);
+        lenis.scrollTo(target, { duration: 1 });
       }
       history.pushState(null, '', href);
     });
