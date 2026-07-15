@@ -47,7 +47,7 @@ const steps = {
       <!-- Page 1 · row 1 -->
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-5">
-          <Photo src={img01} alt="Home exterior at dusk with warm accent lighting" ratio="10/7" sizes="(min-width: 1024px) 42vw, 100vw" />
+          <Photo src={img01} alt="Home exterior at dusk with warm accent lighting" ratio={`${img01.width}/${img01.height}`} sizes="(min-width: 1024px) 42vw, 100vw" />
         </div>
         <div class="lg:border-hairline lg:col-span-4 lg:border-l lg:px-8 lg:pt-10">
           <h3 class="font-display text-ink/80 text-lg lg:text-[21px] lg:leading-tight">{steps.s1.title}</h3>
@@ -62,10 +62,10 @@ const steps = {
       <!-- Page 1 · row 2 -->
       <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-4 lg:pr-4">
-          <Photo src={img02} alt="Bedroom detail with wall sconce and layered cushions" ratio="3/4" sizes="(min-width: 1024px) 32vw, 100vw" />
+          <Photo src={img02} alt="Bedroom detail with wall sconce and layered cushions" ratio={`${img02.width}/${img02.height}`} sizes="(min-width: 1024px) 32vw, 100vw" />
         </div>
         <div class="lg:col-span-4 lg:px-2">
-          <Photo src={img03} alt="Capiz shell chandelier above the staircase" ratio="4/5" sizes="(min-width: 1024px) 33vw, 100vw" />
+          <Photo src={img03} alt="Capiz shell chandelier above the staircase" ratio={`${img03.width}/${img03.height}`} sizes="(min-width: 1024px) 33vw, 100vw" />
         </div>
         <div class="lg:border-hairline lg:col-span-4 lg:border-l lg:px-8 lg:pt-24">
           <h3 class="font-display text-ink/80 text-lg lg:text-[21px] lg:leading-tight">{steps.s3.title}</h3>
@@ -82,10 +82,10 @@ const steps = {
       <!-- Page 2 · row 1 -->
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-5 lg:-mt-2">
-          <Photo src={img05} alt="Kitchen and round dining table with dark marble accents" ratio="3/2" sizes="(min-width: 1024px) 42vw, 100vw" />
+          <Photo src={img05} alt="Kitchen and round dining table with dark marble accents" ratio={`${img05.width}/${img05.height}`} sizes="(min-width: 1024px) 42vw, 100vw" />
         </div>
         <div class="lg:border-hairline lg:col-span-4 lg:border-l lg:px-6 lg:pt-6">
-          <Photo src={img04} alt="Bathroom with glass shower and floating vanity" ratio="3/2" sizes="(min-width: 1024px) 33vw, 100vw" />
+          <Photo src={img04} alt="Bathroom with glass shower and floating vanity" ratio={`${img04.width}/${img04.height}`} sizes="(min-width: 1024px) 33vw, 100vw" />
         </div>
         <div class="lg:col-span-3 lg:px-6 lg:pt-2">
           <h3 class="font-display text-ink/80 text-lg lg:text-[21px] lg:leading-tight">{steps.s4.title}</h3>
@@ -96,7 +96,7 @@ const steps = {
       <!-- Page 2 · row 2 -->
       <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-0" data-fade-group>
         <div class="lg:col-span-3 lg:pr-3">
-          <Photo src={img06} alt="Finished living room fireplace with artwork above" ratio="3/4" sizes="(min-width: 1024px) 24vw, 100vw" />
+          <Photo src={img06} alt="Finished living room fireplace with artwork above" ratio={`${img06.width}/${img06.height}`} sizes="(min-width: 1024px) 24vw, 100vw" />
         </div>
         <div class="lg:border-hairline lg:col-span-5 lg:border-l lg:px-8 lg:pt-12">
           <h3 class="font-display text-ink/80 text-lg lg:text-[21px] lg:leading-tight">{steps.s5.title}</h3>

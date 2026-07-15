@@ -48,40 +48,52 @@
   "images": [
    {
     "file": "p05-1.jpg",
-    "x": 24.96,
-    "y": 1.46,
-    "w": 74.01,
-    "h": 91.95,
+    "x": 54.83,
+    "y": 2.73,
+    "w": 43.32,
+    "h": 80.55,
     "z": 1,
     "px": [
      2000,
-     1334
+     1997
     ],
-    "alt": "Woman descending the front entrance steps along an iron railing"
+    "alt": "Woman descending the front entrance steps along an iron railing",
+    "_new": [
+     45.87,
+     2.91,
+     52.18,
+     80.24
+    ]
    },
    {
     "file": "p05-2.jpg",
-    "x": 8.9,
-    "y": 48.92,
-    "w": 50.15,
-    "h": 51.08,
+    "x": 9.07,
+    "y": 48.73,
+    "w": 46.34,
+    "h": 51.27,
     "z": 2,
     "px": [
      2000,
-     1095
+     1184
     ],
-    "alt": "Front entry seen through lush garden greenery at dusk"
+    "alt": "Front entry seen through lush garden greenery at dusk",
+    "_new": [
+     9.11,
+     48.85,
+     48.8,
+     50.91
+    ]
    },
    {
     "file": "p05-3.jpg",
-    "x": 0.71,
-    "y": 2.72,
-    "w": 45.24,
-    "h": 56.07,
+    "x": 1.66,
+    "y": 2.73,
+    "w": 44.29,
+    "h": 56.0,
     "z": 3,
     "px": [
      2000,
-     1333
+     1360
     ],
     "alt": "Stone home exterior against a dramatic dusk sky"
    }
@@ -112,16 +124,22 @@
   "images": [
    {
     "file": "p07-1.jpg",
-    "x": 0.16,
-    "y": 2.78,
-    "w": 51.02,
-    "h": 59.34,
+    "x": 1.27,
+    "y": 2.73,
+    "w": 48.78,
+    "h": 59.45,
     "z": 1,
     "px": [
      2000,
-     1333
+     1395
     ],
-    "alt": "Stone home exterior against a dramatic dusk sky"
+    "alt": "Stone home exterior against a dramatic dusk sky",
+    "_new": [
+     1.3,
+     2.73,
+     48.67,
+     59.09
+    ]
    },
    {
     "file": "p07-2.jpg",
@@ -240,16 +258,22 @@
   "images": [
    {
     "file": "p11-1.jpg",
-    "x": 11.55,
-    "y": 3.32,
-    "w": 80.23,
-    "h": 93.35,
+    "x": 11.51,
+    "y": 5.45,
+    "w": 80.29,
+    "h": 88.93,
     "z": 1,
     "px": [
      2000,
-     1333
+     1270
     ],
-    "alt": "Home office with staircase, persian rug and dark wood desk"
+    "alt": "Home office with staircase, persian rug and dark wood desk",
+    "_new": [
+     11.52,
+     5.57,
+     80.16,
+     88.64
+    ]
    }
   ],
   "bg": "#1f1b1a"
@@ -310,16 +334,22 @@
    },
    {
     "file": "p14-2.jpg",
-    "x": 67.12,
-    "y": 9.79,
-    "w": 28.77,
-    "h": 75.45,
+    "x": 67.02,
+    "y": 13.12,
+    "w": 28.88,
+    "h": 70.19,
     "z": 2,
     "px": [
-     1333,
+     1433,
      2000
     ],
-    "alt": "Marble fireplace with abstract artwork, wall sconces and a pendant light"
+    "alt": "Marble fireplace with abstract artwork, wall sconces and a pendant light",
+    "_new": [
+     67.08,
+     13.18,
+     28.63,
+     70.0
+    ]
    }
   ],
   "bg": "#1f1b1a"
@@ -329,16 +359,22 @@
   "images": [
    {
     "file": "p15-1.jpg",
-    "x": 0.19,
-    "y": 38.85,
-    "w": 50.44,
-    "h": 58.7,
+    "x": 2.24,
+    "y": 40.37,
+    "w": 43.61,
+    "h": 57.24,
     "z": 1,
     "px": [
      2000,
-     1333
+     1503
     ],
-    "alt": "Coffee table detail with brass bowls on marble"
+    "alt": "Coffee table detail with brass bowls on marble",
+    "_new": [
+     2.34,
+     40.57,
+     43.46,
+     56.82
+    ]
    },
    {
     "file": "p15-2.jpg",
@@ -374,16 +410,22 @@
    },
    {
     "file": "p16-2.jpg",
-    "x": 0.0,
-    "y": 6.15,
-    "w": 41.79,
-    "h": 51.15,
+    "x": 2.05,
+    "y": 6.13,
+    "w": 39.71,
+    "h": 51.11,
     "z": 2,
     "px": [
      2000,
-     1404
+     1475
     ],
-    "alt": "Built-in wood shelving styled with frames and objects"
+    "alt": "Built-in wood shelving styled with frames and objects",
+    "_new": [
+     2.08,
+     6.14,
+     39.56,
+     50.91
+    ]
    }
   ],
   "bg": "#201712"
@@ -635,27 +677,27 @@
   "images": [
    {
     "file": "p27-1.jpg",
-    "x": 0.57,
+    "x": 0.49,
     "y": 0.0,
-    "w": 79.36,
-    "h": 82.17,
+    "w": 79.41,
+    "h": 81.26,
     "z": 1,
     "px": [
      2000,
-     1185
+     1173
     ],
     "alt": "Upper hallway with iron railing and wood floors"
    },
    {
     "file": "p27-2.jpg",
-    "x": 43.61,
-    "y": 35.72,
-    "w": 48.1,
-    "h": 56.01,
+    "x": 47.71,
+    "y": 35.6,
+    "w": 44.0,
+    "h": 56.05,
     "z": 2,
     "px": [
      2000,
-     1333
+     1455
     ],
     "alt": "Primary bedroom with upholstered bed and patterned rug"
    }
@@ -667,29 +709,41 @@
   "images": [
    {
     "file": "p28-1.jpg",
-    "x": 1.23,
-    "y": 0.0,
-    "w": 44.22,
-    "h": 91.53,
+    "x": 1.17,
+    "y": 3.75,
+    "w": 34.24,
+    "h": 74.11,
     "z": 1,
     "px": [
-     1690,
+     1613,
      2000
     ],
-    "alt": "Bedroom detail with leather headboard, sconce and orange cushion"
+    "alt": "Bedroom detail with leather headboard, sconce and orange cushion",
+    "_new": [
+     1.17,
+     3.86,
+     34.22,
+     73.86
+    ]
    },
    {
     "file": "p28-2.jpg",
-    "x": 30.69,
-    "y": 17.5,
-    "w": 68.45,
-    "h": 79.67,
+    "x": 30.63,
+    "y": 18.91,
+    "w": 68.49,
+    "h": 77.0,
     "z": 2,
     "px": [
      2000,
-     1333
+     1289
     ],
-    "alt": "Long floating vanity with backlit mirror in the dressing suite"
+    "alt": "Long floating vanity with backlit mirror in the dressing suite",
+    "_new": [
+     30.64,
+     18.86,
+     68.31,
+     77.05
+    ]
    }
   ],
   "bg": "#8c371f"
@@ -699,29 +753,41 @@
   "images": [
    {
     "file": "p29-1.jpg",
-    "x": 41.55,
-    "y": 32.6,
-    "w": 55.86,
-    "h": 64.96,
+    "x": 41.46,
+    "y": 34.75,
+    "w": 55.9,
+    "h": 60.65,
     "z": 1,
     "px": [
      2000,
-     1333
+     1246
     ],
-    "alt": "Freestanding bathtub beside a glass shower"
+    "alt": "Freestanding bathtub beside a glass shower",
+    "_new": [
+     41.51,
+     34.77,
+     55.82,
+     60.45
+    ]
    },
    {
     "file": "p29-2.jpg",
-    "x": 1.84,
-    "y": 4.73,
-    "w": 56.0,
-    "h": 65.22,
+    "x": 1.76,
+    "y": 4.6,
+    "w": 52.49,
+    "h": 65.42,
     "z": 2,
     "px": [
      2000,
-     1333
+     1425
     ],
-    "alt": "White tulips on the bathroom counter"
+    "alt": "White tulips on the bathroom counter",
+    "_new": [
+     1.82,
+     4.66,
+     52.31,
+     65.0
+    ]
    }
   ],
   "bg": "#252626"
@@ -731,16 +797,22 @@
   "images": [
    {
     "file": "p30-1.jpg",
-    "x": 44.38,
-    "y": 34.43,
-    "w": 54.39,
-    "h": 63.3,
+    "x": 47.9,
+    "y": 38.5,
+    "w": 50.83,
+    "h": 59.11,
     "z": 1,
     "px": [
      2000,
-     1333
+     1332
     ],
-    "alt": "Closet corridor with white built-in wardrobes"
+    "alt": "Closet corridor with white built-in wardrobes",
+    "_new": [
+     48.02,
+     38.64,
+     50.62,
+     58.86
+    ]
    },
    {
     "file": "p30-2.jpg",
@@ -852,16 +924,22 @@
    },
    {
     "file": "p35-2.jpg",
-    "x": 0.0,
-    "y": 23.55,
-    "w": 67.19,
-    "h": 76.45,
+    "x": 1.17,
+    "y": 23.51,
+    "w": 57.27,
+    "h": 75.13,
     "z": 2,
     "px": [
      2000,
-     1304
+     1503
     ],
-    "alt": "Bathroom with tub, vanity and glass shower"
+    "alt": "Bathroom with tub, vanity and glass shower",
+    "_new": [
+     1.3,
+     23.52,
+     56.99,
+     75.0
+    ]
    }
   ],
   "bg": "#252626"
@@ -871,16 +949,22 @@
   "images": [
    {
     "file": "p36-1.jpg",
-    "x": 48.18,
-    "y": 36.01,
-    "w": 51.82,
-    "h": 63.94,
+    "x": 51.22,
+    "y": 35.95,
+    "w": 48.78,
+    "h": 64.05,
     "z": 1,
     "px": [
      2000,
-     1414
+     1502
     ],
-    "alt": "Bathroom mirror detail with tulips"
+    "alt": "Bathroom mirror detail with tulips",
+    "_new": [
+     51.27,
+     35.91,
+     48.54,
+     63.86
+    ]
    },
    {
     "file": "p36-2.jpg",
@@ -897,16 +981,22 @@
    },
    {
     "file": "p36-3.jpg",
-    "x": 44.11,
-    "y": 10.0,
-    "w": 42.97,
-    "h": 50.0,
+    "x": 48.2,
+    "y": 9.88,
+    "w": 34.73,
+    "h": 50.09,
     "z": 3,
     "px": [
      2000,
-     1333
+     1648
     ],
-    "alt": "Bathroom vanity with tulips and wall sconce"
+    "alt": "Bathroom vanity with tulips and wall sconce",
+    "_new": [
+     44.05,
+     10.0,
+     38.78,
+     49.77
+    ]
    }
   ],
   "bg": "#201712"
@@ -967,16 +1057,22 @@
    },
    {
     "file": "p39-2.jpg",
-    "x": 36.93,
-    "y": 37.66,
-    "w": 52.05,
-    "h": 60.61,
+    "x": 44.1,
+    "y": 43.78,
+    "w": 44.88,
+    "h": 52.98,
     "z": 2,
     "px": [
      2000,
-     1333
+     1352
     ],
-    "alt": "Built-in wood shelving styled with frames and objects"
+    "alt": "Built-in wood shelving styled with frames and objects",
+    "_new": [
+     36.89,
+     37.61,
+     51.92,
+     59.09
+    ]
    }
   ],
   "bg": "#1b1813"
@@ -1126,29 +1222,41 @@
   "images": [
    {
     "file": "p46-1.jpg",
-    "x": 40.08,
-    "y": 6.6,
-    "w": 58.42,
-    "h": 68.03,
+    "x": 64.2,
+    "y": 6.47,
+    "w": 34.34,
+    "h": 68.14,
     "z": 1,
     "px": [
-     2000,
-     1333
+     1763,
+     2000
     ],
-    "alt": "Powder room with dark stone counter and wood cabinetry"
+    "alt": "Powder room with dark stone counter and wood cabinetry",
+    "_new": [
+     64.02,
+     6.59,
+     34.35,
+     67.73
+    ]
    },
    {
     "file": "p46-2.jpg",
-    "x": 31.08,
-    "y": 3.2,
-    "w": 33.09,
-    "h": 86.83,
+    "x": 32.88,
+    "y": 3.07,
+    "w": 31.32,
+    "h": 86.88,
     "z": 2,
     "px": [
-     1333,
+     1263,
      2000
     ],
-    "alt": "Reading chair beside the fireplace with orange cushion"
+    "alt": "Reading chair beside the fireplace with orange cushion",
+    "_new": [
+     32.73,
+     3.18,
+     31.36,
+     86.59
+    ]
    },
    {
     "file": "p46-3.jpg",
@@ -1193,33 +1301,51 @@
      1333,
      2000
     ],
-    "alt": "Ring chandelier over the renovated staircase with dark tile"
+    "alt": "Ring chandelier over the renovated staircase with dark tile",
+    "_new": [
+     1.5,
+     3.86,
+     31.75,
+     87.5
+    ]
    },
    {
     "file": "p47-2.jpg",
-    "x": 65.53,
-    "y": 4.44,
-    "w": 33.02,
-    "h": 86.57,
+    "x": 66.73,
+    "y": 4.43,
+    "w": 30.63,
+    "h": 86.54,
     "z": 2,
     "px": [
-     1333,
+     1238,
      2000
     ],
-    "alt": "Bedroom corner with sconce and Barcelona chair"
+    "alt": "Bedroom corner with sconce and Barcelona chair",
+    "_new": [
+     66.82,
+     4.43,
+     30.45,
+     86.36
+    ]
    },
    {
     "file": "p47-3.jpg",
-    "x": 33.34,
-    "y": 3.94,
-    "w": 33.46,
-    "h": 87.6,
+    "x": 37.27,
+    "y": 3.92,
+    "w": 27.12,
+    "h": 87.56,
     "z": 3,
     "px": [
-     1333,
+     1081,
      2000
     ],
-    "alt": "Lotus pendant light over the kitchen"
+    "alt": "Lotus pendant light over the kitchen",
+    "_new": [
+     33.31,
+     3.86,
+     30.97,
+     87.5
+    ]
    }
   ],
   "bg": "#c7c4c1"
@@ -1325,16 +1451,22 @@
   "images": [
    {
     "file": "p51-1.jpg",
-    "x": 47.18,
-    "y": 0.0,
-    "w": 43.63,
-    "h": 47.36,
+    "x": 50.83,
+    "y": 3.24,
+    "w": 40.0,
+    "h": 38.5,
     "z": 1,
     "px": [
      2000,
-     1244
+     1104
     ],
-    "alt": "Black marble kitchen island with hood"
+    "alt": "Black marble kitchen island with hood",
+    "_new": [
+     50.94,
+     3.41,
+     39.69,
+     38.18
+    ]
    },
    {
     "file": "p51-2.jpg",
@@ -1370,42 +1502,60 @@
   "images": [
    {
     "file": "p54-1.jpg",
-    "x": 4.97,
-    "y": 37.04,
-    "w": 43.19,
-    "h": 62.96,
+    "x": 4.88,
+    "y": 55.4,
+    "w": 31.8,
+    "h": 44.6,
     "z": 1,
     "px": [
-     1829,
-     2000
+     1715,
+     1810
     ],
-    "alt": "Bedroom detail with wall sconce and layered cushions"
+    "alt": "Bedroom detail with wall sconce and layered cushions",
+    "_new": [
+     4.94,
+     54.85,
+     31.62,
+     44.89
+    ]
    },
    {
     "file": "p54-2.jpg",
-    "x": 3.7,
-    "y": 17.17,
-    "w": 42.61,
-    "h": 37.85,
+    "x": 4.68,
+    "y": 17.04,
+    "w": 40.68,
+    "h": 37.97,
     "z": 2,
     "px": [
      2000,
-     1333
+     1396
     ],
-    "alt": "Stone home exterior against a dramatic dusk sky"
+    "alt": "Stone home exterior against a dramatic dusk sky",
+    "_new": [
+     4.68,
+     17.16,
+     40.6,
+     37.61
+    ]
    },
    {
     "file": "p54-3.jpg",
-    "x": 34.98,
-    "y": 56.86,
-    "w": 38.8,
-    "h": 34.44,
+    "x": 37.56,
+    "y": 56.83,
+    "w": 33.56,
+    "h": 34.46,
     "z": 3,
     "px": [
      2000,
-     1333
+     1540
     ],
-    "alt": "Capiz shell chandelier above the staircase"
+    "alt": "Capiz shell chandelier above the staircase",
+    "_new": [
+     34.94,
+     56.85,
+     36.04,
+     34.32
+    ]
    }
   ]
  },
@@ -1414,42 +1564,60 @@
   "images": [
    {
     "file": "p55-1.jpg",
-    "x": 43.54,
-    "y": 0.0,
-    "w": 32.87,
-    "h": 82.46,
+    "x": 43.51,
+    "y": 24.19,
+    "w": 32.88,
+    "h": 28.35,
     "z": 1,
     "px": [
-     1800,
-     1200
+     1169,
+     757
     ],
-    "alt": "Bathroom with lighted mirrors, glass shower and soaker tub"
+    "alt": "Bathroom with lighted mirrors, glass shower and soaker tub",
+    "_new": [
+     43.53,
+     19.58,
+     32.79,
+     32.76
+    ]
    },
    {
     "file": "p55-2.jpg",
-    "x": 5.71,
-    "y": 44.39,
-    "w": 22.77,
-    "h": 55.61,
+    "x": 5.66,
+    "y": 57.09,
+    "w": 22.83,
+    "h": 42.91,
     "z": 2,
     "px": [
-     1090,
-     2000
+     1170,
+     1657
     ],
-    "alt": "Finished living room fireplace with artwork above"
+    "alt": "Finished living room fireplace with artwork above",
+    "_new": [
+     5.66,
+     76.95,
+     22.64,
+     22.88
+    ]
    },
    {
     "file": "p55-3.jpg",
-    "x": 1.08,
-    "y": 0.0,
-    "w": 42.17,
-    "h": 95.17,
+    "x": 1.07,
+    "y": 19.77,
+    "w": 42.15,
+    "h": 37.32,
     "z": 3,
     "px": [
-     1800,
-     1200
+     1169,
+     777
     ],
-    "alt": "Kitchen with round dining table and dark marble accents"
+    "alt": "Kitchen with round dining table and dark marble accents",
+    "_new": [
+     1.04,
+     19.58,
+     42.03,
+     57.37
+    ]
    }
   ]
  },
@@ -1515,14 +1683,14 @@
   "images": [
    {
     "file": "p57-1.jpg",
-    "x": 31.0,
-    "y": 14.4,
-    "w": 52.3,
-    "h": 78.6,
+    "x": 30.93,
+    "y": 14.31,
+    "w": 68.0,
+    "h": 79.22,
     "z": 1,
     "px": [
      2000,
-     1721
+     1334
     ],
     "alt": "Farmhouse kitchen with cream cabinetry and black island"
    },
@@ -1539,7 +1707,8 @@
     ],
     "alt": "Designer drawing back the curtains in a dark dressing room"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "58": {
   "aspect": 1.7468,
@@ -1570,46 +1739,59 @@
     ],
     "alt": "Farmhouse dining room with crystal chandelier and display cabinet"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "59": {
   "aspect": 1.7468,
   "images": [
    {
     "file": "p59-1.jpg",
-    "x": 68.95,
-    "y": 3.31,
-    "w": 31.05,
-    "h": 83.38,
+    "x": 70.93,
+    "y": 3.24,
+    "w": 27.71,
+    "h": 83.48,
     "z": 1,
     "px": [
-     1303,
+     1163,
      2000
     ],
-    "alt": "Lantern chandelier beside peony artwork"
+    "alt": "Lantern chandelier beside peony artwork",
+    "_new": [
+     70.98,
+     3.3,
+     27.59,
+     83.18
+    ]
    },
    {
     "file": "p59-2.jpg",
-    "x": 14.0,
-    "y": 5.7,
-    "w": 35.3,
-    "h": 84.1,
+    "x": 14.93,
+    "y": 5.45,
+    "w": 33.46,
+    "h": 84.5,
     "z": 2,
     "px": [
-     1468,
+     1385,
      2000
     ],
-    "alt": "Farmhouse entry with dark wood door and frosted glass"
+    "alt": "Farmhouse entry with dark wood door and frosted glass",
+    "_new": [
+     15.03,
+     5.68,
+     33.31,
+     83.86
+    ]
    },
    {
     "file": "p59-3.jpg",
-    "x": 43.87,
-    "y": 10.0,
-    "w": 31.41,
-    "h": 82.23,
+    "x": 46.93,
+    "y": 9.88,
+    "w": 26.34,
+    "h": 82.28,
     "z": 3,
     "px": [
-     1333,
+     1120,
      2000
     ],
     "alt": "Sculptural chandelier detail in the farmhouse"
@@ -1627,7 +1809,8 @@
     ],
     "alt": "Couple sharing coffee in the farmhouse kitchen"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "60": {
   "aspect": 1.7468,
@@ -1647,44 +1830,51 @@
    },
    {
     "file": "p60-2.jpg",
-    "x": 45.1,
-    "y": 7.5,
-    "w": 40.1,
-    "h": 92.3,
+    "x": 45.07,
+    "y": 7.33,
+    "w": 36.2,
+    "h": 92.67,
     "z": 2,
     "px": [
-     1518,
+     1363,
      2000
     ],
-    "alt": "Farmhouse hallway with roman shade and patterned rug"
+    "alt": "Farmhouse hallway with roman shade and patterned rug",
+    "_new": [
+     45.09,
+     7.5,
+     36.04,
+     92.05
+    ]
    },
    {
     "file": "p60-3.jpg",
-    "x": 31.11,
-    "y": 2.93,
-    "w": 27.96,
-    "h": 73.27,
+    "x": 33.17,
+    "y": 2.9,
+    "w": 25.17,
+    "h": 73.25,
     "z": 3,
     "px": [
-     1333,
+     1201,
      2000
     ],
     "alt": "Hallway vignette with globe and watercolors"
    },
    {
     "file": "p60-4.jpg",
-    "x": 64.6,
-    "y": 7.4,
-    "w": 31.8,
-    "h": 88.9,
+    "x": 79.8,
+    "y": 3.75,
+    "w": 16.68,
+    "h": 92.84,
     "z": 4,
     "px": [
-     1247,
+     629,
      2000
     ],
     "alt": "Console with artwork and glass lamp"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "61": {
   "aspect": 1.7468,
@@ -1704,26 +1894,32 @@
    },
    {
     "file": "p61-2.jpg",
-    "x": 21.87,
-    "y": 10.0,
-    "w": 30.89,
-    "h": 81.07,
+    "x": 21.85,
+    "y": 9.88,
+    "w": 22.83,
+    "h": 81.26,
     "z": 2,
     "px": [
-     1333,
+     984,
      2000
     ],
-    "alt": "Bathroom vanity with magnifying mirror"
+    "alt": "Bathroom vanity with magnifying mirror",
+    "_new": [
+     21.86,
+     10.0,
+     22.64,
+     80.91
+    ]
    },
    {
     "file": "p61-3.jpg",
-    "x": 44.7,
-    "y": 3.9,
-    "w": 37.5,
-    "h": 92.0,
+    "x": 44.68,
+    "y": 3.75,
+    "w": 29.37,
+    "h": 92.33,
     "z": 3,
     "px": [
-     1421,
+     1108,
      2000
     ],
     "alt": "Farmhouse island with pendant lights"
@@ -1741,34 +1937,41 @@
     ],
     "alt": "Designer walking through the walk-in closet"
    }
-  ]
+  ],
+  "bg": "#201712"
  },
  "62": {
   "aspect": 1.7468,
   "images": [
    {
     "file": "p62-1.jpg",
-    "x": 62.5,
-    "y": 17.6,
-    "w": 37.3,
-    "h": 75.2,
+    "x": 75.22,
+    "y": 17.55,
+    "w": 24.78,
+    "h": 75.47,
     "z": 1,
     "px": [
-     1731,
+     1147,
      2000
     ],
-    "alt": "Renovated staircase with black railing and lantern pendants"
+    "alt": "Renovated staircase with black railing and lantern pendants",
+    "_new": [
+     77.55,
+     17.5,
+     22.12,
+     75.0
+    ]
    },
    {
     "file": "p62-2.jpg",
-    "x": 0.0,
+    "x": 30.34,
     "y": 0.0,
-    "w": 52.83,
-    "h": 80.02,
+    "w": 18.34,
+    "h": 79.9,
     "z": 2,
     "px": [
-     2000,
-     1734
+     802,
+     2000
     ],
     "alt": "Renovated kitchen with dark cabinets and white quartz counters"
    },
@@ -1787,145 +1990,178 @@
    },
    {
     "file": "p62-4.jpg",
-    "x": 1.1,
-    "y": 18.4,
-    "w": 39.3,
-    "h": 57.3,
+    "x": 15.12,
+    "y": 28.28,
+    "w": 19.71,
+    "h": 71.72,
     "z": 4,
     "px": [
-     2000,
-     1667
+     961,
+     2000
     ],
     "alt": "Ring chandelier over the renovated staircase"
    },
    {
     "file": "p62-5.jpg",
-    "x": 42.65,
-    "y": 11.46,
-    "w": 35.07,
-    "h": 88.54,
+    "x": 45.27,
+    "y": 11.41,
+    "w": 29.95,
+    "h": 88.59,
     "z": 5,
     "px": [
-     1385,
+     1183,
      2000
     ],
-    "alt": "Renovated kitchenette with orange gerbera flowers"
+    "alt": "Renovated kitchenette with orange gerbera flowers",
+    "_new": [
+     42.62,
+     11.36,
+     35.0,
+     81.36
+    ]
    }
-  ]
+  ],
+  "bg": "#4a4641"
  },
  "63": {
   "aspect": 1.7468,
   "images": [
    {
     "file": "p63-1.jpg",
-    "x": 23.88,
-    "y": 6.51,
-    "w": 31.48,
-    "h": 82.48,
+    "x": 32.29,
+    "y": 6.47,
+    "w": 23.12,
+    "h": 82.45,
     "z": 1,
     "px": [
-     1333,
+     978,
      2000
     ],
-    "alt": "Renovated hallway with wood door"
+    "alt": "Renovated hallway with wood door",
+    "_new": [
+     32.34,
+     6.48,
+     22.9,
+     82.27
+    ]
    },
    {
     "file": "p63-2.jpg",
-    "x": 5.7,
-    "y": 4.8,
-    "w": 31.0,
-    "h": 77.0,
+    "x": 5.66,
+    "y": 4.77,
+    "w": 26.63,
+    "h": 90.46,
     "z": 2,
     "px": [
-     1408,
+     1030,
      2000
     ],
     "alt": "Renovated bathroom vanity with tulips and red door"
    },
    {
     "file": "p63-3.jpg",
-    "x": 69.7,
-    "y": 3.5,
-    "w": 26.3,
-    "h": 94.3,
+    "x": 77.76,
+    "y": 3.58,
+    "w": 18.34,
+    "h": 94.55,
     "z": 3,
     "px": [
-     289,
-     594
+     202,
+     596
     ],
-    "alt": "Custom wood shelving in the renovated closet"
+    "alt": "Custom wood shelving in the renovated closet",
+    "_new": [
+     77.75,
+     3.64,
+     18.09,
+     93.86
+    ]
    },
    {
     "file": "p63-4.jpg",
-    "x": 51.06,
-    "y": 7.1,
-    "w": 32.72,
-    "h": 85.81,
+    "x": 51.41,
+    "y": 6.98,
+    "w": 30.44,
+    "h": 85.86,
     "z": 4,
     "px": [
-     1333,
+     1242,
      2000
     ],
     "alt": "Light wood wardrobe doors"
    }
-  ]
+  ],
+  "bg": "#201b15"
  },
  "64": {
   "aspect": 1.7468,
   "images": [
    {
     "file": "p64-1.jpg",
-    "x": 39.78,
-    "y": 14.42,
-    "w": 60.22,
-    "h": 71.1,
+    "x": 74.54,
+    "y": 14.31,
+    "w": 24.78,
+    "h": 71.21,
     "z": 1,
     "px": [
-     2000,
-     1354
+     1216,
+     2000
     ],
     "alt": "Corporate office desk with shelving and flower artwork"
    },
    {
     "file": "p64-2.jpg",
-    "x": 0.0,
-    "y": 5.55,
-    "w": 37.54,
-    "h": 90.28,
+    "x": 1.37,
+    "y": 14.82,
+    "w": 30.73,
+    "h": 81.09,
     "z": 2,
     "px": [
-     1162,
-     1600
+     950,
+     1436
     ],
-    "alt": "Glass table with plant and open shelving"
+    "alt": "Glass table with plant and open shelving",
+    "_new": [
+     0.0,
+     79.09,
+     37.35,
+     16.59
+    ]
    },
    {
     "file": "p64-3.jpg",
-    "x": 0.0,
-    "y": 5.22,
-    "w": 55.78,
-    "h": 74.3,
+    "x": 22.15,
+    "y": 5.11,
+    "w": 30.54,
+    "h": 74.45,
     "z": 3,
     "px": [
-     2000,
-     1527
+     1433,
+     2000
     ],
-    "alt": "Condo interior with leaning mirror, bench and artwork"
+    "alt": "Condo interior with leaning mirror, bench and artwork",
+    "_new": [
+     0.0,
+     5.11,
+     48.41,
+     74.09
+    ]
    },
    {
     "file": "p64-4.jpg",
-    "x": 48.59,
-    "y": 0.0,
-    "w": 42.68,
-    "h": 98.04,
+    "x": 48.49,
+    "y": 14.82,
+    "w": 27.02,
+    "h": 81.94,
     "z": 4,
     "px": [
-     1200,
-     1577
+     756,
+     1318
     ],
     "alt": "Condo dining table with hallway beyond"
    }
-  ]
+  ],
+  "bg": "#42382e"
  },
  "65": {
   "aspect": 1.7468,
@@ -1945,30 +2181,37 @@
    },
    {
     "file": "p65-2.jpg",
-    "x": 36.4,
-    "y": 20.5,
-    "w": 28.1,
-    "h": 67.5,
+    "x": 36.29,
+    "y": 20.27,
+    "w": 27.71,
+    "h": 71.55,
     "z": 2,
     "px": [
-     1455,
+     1349,
      2000
     ],
-    "alt": "Condo living room with large framed mirror and bench"
+    "alt": "Condo living room with large framed mirror and bench",
+    "_new": [
+     36.37,
+     20.45,
+     24.85,
+     67.27
+    ]
    },
    {
     "file": "p65-3.jpg",
-    "x": 61.4,
-    "y": 14.3,
-    "w": 32.0,
-    "h": 81.4,
+    "x": 64.0,
+    "y": 14.31,
+    "w": 29.66,
+    "h": 81.43,
     "z": 3,
     "px": [
-     1375,
+     1273,
      2000
     ],
     "alt": "Compact corporate kitchen in light wood"
    }
-  ]
+  ],
+  "bg": "#201b15"
  }
 }
